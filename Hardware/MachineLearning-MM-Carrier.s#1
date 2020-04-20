@@ -26757,18 +26757,18 @@ Close only if you know what you're doing.</text>
 <wire x1="167.64" y1="215.9" x2="167.64" y2="279.4" width="0.2032" layer="97" style="longdash"/>
 <wire x1="167.64" y1="215.9" x2="228.6" y2="215.9" width="0.2032" layer="97" style="longdash"/>
 <wire x1="228.6" y1="279.4" x2="228.6" y2="215.9" width="0.2032" layer="97" style="longdash"/>
-<wire x1="170.18" y1="106.68" x2="330.2" y2="106.68" width="0.2032" layer="97" style="longdash"/>
+<wire x1="170.18" y1="106.68" x2="248.92" y2="106.68" width="0.2032" layer="97" style="longdash"/>
+<wire x1="248.92" y1="106.68" x2="330.2" y2="106.68" width="0.2032" layer="97" style="longdash"/>
 <wire x1="330.2" y1="106.68" x2="330.2" y2="35.56" width="0.2032" layer="97" style="longdash"/>
 <wire x1="55.88" y1="172.72" x2="55.88" y2="0" width="0.2032" layer="97" style="longdash"/>
 <text x="109.474" y="164.846" size="2.54" layer="97" font="vector" align="center">Universal MicroMod Connector</text>
-<text x="350.52" y="10.16" size="2.54" layer="94">Priyanka Makin</text>
-<text x="342.9" y="17.78" size="2.54" layer="94">WeatherStation-MM-Carrier</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
 <instance part="FRAME1" gate="G$2" x="330.2" y="0" smashed="yes">
 <attribute name="LAST_DATE_TIME" x="342.9" y="1.27" size="2.54" layer="94" font="vector"/>
 <attribute name="SHEET" x="416.56" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="DRAWING_NAME" x="345.694" y="17.78" size="2.7432" layer="94" font="vector"/>
 <attribute name="DESIGNER" x="353.314" y="11.176" size="2.7432" layer="94" font="vector"/>
 <attribute name="REV" x="419.1" y="6.604" size="2.7432" layer="94" font="vector"/>
 </instance>
