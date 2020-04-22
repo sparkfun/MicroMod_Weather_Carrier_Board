@@ -10112,7 +10112,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="R11" pad="1"/>
 <wire x1="90.59" y1="30.48" x2="90.563" y2="26.67" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="UV_SIG">
+<signal name="SOIL_MOIST_SIG">
 <contactref element="J7" pad="3"/>
 <contactref element="J4" pad="1"/>
 <wire x1="92.71" y1="17.78" x2="99.71" y2="10.16" width="0" layer="19" extent="1-1"/>
