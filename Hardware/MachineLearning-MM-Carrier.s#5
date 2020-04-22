@@ -28832,7 +28832,7 @@ Close only if you know what you're doing.</text>
 <wire x1="416.56" y1="86.36" x2="416.56" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="VELM6075_SIG" class="0">
+<net name="SOIL_MOIST_SIG" class="0">
 <segment>
 <pinref part="J7" gate="J$1" pin="3"/>
 <wire x1="190.5" y1="193.04" x2="185.42" y2="193.04" width="0.1524" layer="91"/>
