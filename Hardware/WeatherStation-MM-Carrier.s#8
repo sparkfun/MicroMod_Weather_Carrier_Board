@@ -28291,11 +28291,11 @@ changed in software</text>
 <attribute name="NAME" x="26.924" y="254.381" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="26.924" y="249.301" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="GND21" gate="1" x="17.78" y="246.38" smashed="yes">
-<attribute name="VALUE" x="17.78" y="246.126" size="1.778" layer="96" align="top-center"/>
+<instance part="GND21" gate="1" x="17.78" y="243.84" smashed="yes">
+<attribute name="VALUE" x="17.78" y="243.586" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="GND22" gate="1" x="25.4" y="246.38" smashed="yes">
-<attribute name="VALUE" x="25.4" y="246.126" size="1.778" layer="96" align="top-center"/>
+<instance part="GND22" gate="1" x="25.4" y="243.84" smashed="yes">
+<attribute name="VALUE" x="25.4" y="243.586" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="FD1" gate="G$1" x="411.48" y="27.94" smashed="yes"/>
 <instance part="FD2" gate="G$1" x="414.02" y="27.94" smashed="yes"/>
@@ -28434,8 +28434,8 @@ changed in software</text>
 <attribute name="NAME" x="17.78" y="43.434" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="17.78" y="28.194" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="GND6" gate="1" x="35.56" y="246.38" smashed="yes">
-<attribute name="VALUE" x="35.56" y="246.126" size="1.778" layer="96" align="top-center"/>
+<instance part="GND6" gate="1" x="35.56" y="243.84" smashed="yes">
+<attribute name="VALUE" x="35.56" y="243.586" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="S2" gate="G$1" x="101.6" y="17.78" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.076" y="17.78" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -28867,6 +28867,7 @@ changed in software</text>
 <segment>
 <pinref part="C13" gate="G$1" pin="2"/>
 <pinref part="GND22" gate="1" pin="GND"/>
+<wire x1="25.4" y1="246.38" x2="25.4" y2="248.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND72" gate="1" pin="GND"/>
@@ -28903,6 +28904,7 @@ changed in software</text>
 <segment>
 <pinref part="C2" gate="G$1" pin="-"/>
 <pinref part="GND21" gate="1" pin="GND"/>
+<wire x1="17.78" y1="246.38" x2="17.78" y2="248.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
@@ -28923,6 +28925,7 @@ changed in software</text>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="35.56" y1="246.38" x2="35.56" y2="248.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="S2" gate="G$1" pin="1"/>
