@@ -18596,22 +18596,12 @@ Close only if you know what you're doing.</text>
 <label x="198.12" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="J8" gate="J1" pin="2"/>
 </segment>
-<segment>
-<wire x1="134.62" y1="111.76" x2="137.16" y2="111.76" width="0.1524" layer="91"/>
-<label x="137.16" y="111.76" size="1.27" layer="95" xref="yes"/>
-<pinref part="J15" gate="J1" pin="D0"/>
-</segment>
 </net>
 <net name="D1" class="0">
 <segment>
 <wire x1="200.66" y1="45.72" x2="198.12" y2="45.72" width="0.1524" layer="91"/>
 <label x="198.12" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="J8" gate="J1" pin="1"/>
-</segment>
-<segment>
-<wire x1="134.62" y1="109.22" x2="137.16" y2="109.22" width="0.1524" layer="91"/>
-<label x="137.16" y="109.22" size="1.27" layer="95" xref="yes"/>
-<pinref part="J15" gate="J1" pin="D1/CAM_TRIG"/>
 </segment>
 </net>
 <net name="SPI_MOSI" class="0">
@@ -18715,11 +18705,6 @@ Close only if you know what you're doing.</text>
 </net>
 <net name="RAIN" class="0">
 <segment>
-<wire x1="134.62" y1="81.28" x2="137.16" y2="81.28" width="0.1524" layer="91"/>
-<label x="137.16" y="81.28" size="1.27" layer="95" xref="yes"/>
-<pinref part="J15" gate="J1" pin="G2/BUS2"/>
-</segment>
-<segment>
 <pinref part="J7" gate="G$1" pin="3"/>
 <wire x1="187.96" y1="134.62" x2="203.2" y2="134.62" width="0.1524" layer="91"/>
 <label x="226.06" y="134.62" size="1.27" layer="95" xref="yes"/>
@@ -18739,6 +18724,11 @@ Close only if you know what you're doing.</text>
 <junction x="203.2" y="134.62"/>
 <pinref part="R15" gate="G$1" pin="1"/>
 <wire x1="203.2" y1="134.62" x2="203.2" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="134.62" y1="109.22" x2="137.16" y2="109.22" width="0.1524" layer="91"/>
+<label x="137.16" y="109.22" size="1.27" layer="95" xref="yes"/>
+<pinref part="J15" gate="J1" pin="D1/CAM_TRIG"/>
 </segment>
 </net>
 <net name="WDIR" class="0">
@@ -18765,11 +18755,6 @@ Close only if you know what you're doing.</text>
 </net>
 <net name="WSPEED" class="0">
 <segment>
-<wire x1="134.62" y1="83.82" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
-<label x="137.16" y="83.82" size="1.27" layer="95" xref="yes"/>
-<pinref part="J15" gate="J1" pin="G1/BUS1"/>
-</segment>
-<segment>
 <pinref part="J13" gate="G$1" pin="3"/>
 <wire x1="251.46" y1="134.62" x2="271.78" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="271.78" y1="134.62" x2="281.94" y2="134.62" width="0.1524" layer="91"/>
@@ -18789,6 +18774,11 @@ Close only if you know what you're doing.</text>
 <junction x="271.78" y="134.62"/>
 <pinref part="R16" gate="G$1" pin="1"/>
 <wire x1="271.78" y1="134.62" x2="271.78" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="134.62" y1="111.76" x2="137.16" y2="111.76" width="0.1524" layer="91"/>
+<label x="137.16" y="111.76" size="1.27" layer="95" xref="yes"/>
+<pinref part="J15" gate="J1" pin="D0"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -18876,11 +18866,6 @@ Close only if you know what you're doing.</text>
 </net>
 <net name="LIGHTNING_!CS!" class="0">
 <segment>
-<pinref part="J15" gate="J1" pin="G4/BUS4"/>
-<wire x1="134.62" y1="76.2" x2="137.16" y2="76.2" width="0.1524" layer="91"/>
-<label x="137.16" y="76.2" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U3" gate="G$1" pin="!CS"/>
 <pinref part="R19" gate="G$1" pin="1"/>
 <wire x1="396.24" y1="185.42" x2="416.56" y2="185.42" width="0.1524" layer="91"/>
@@ -18889,17 +18874,22 @@ Close only if you know what you're doing.</text>
 <junction x="416.56" y="185.42"/>
 <label x="419.1" y="185.42" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="J15" gate="J1" pin="G1/BUS1"/>
+<wire x1="134.62" y1="83.82" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
+<label x="137.16" y="83.82" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="HEADER_!CS!" class="0">
-<segment>
-<pinref part="J15" gate="J1" pin="G5/BUS5"/>
-<wire x1="134.62" y1="73.66" x2="137.16" y2="73.66" width="0.1524" layer="91"/>
-<label x="137.16" y="73.66" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="4"/>
 <wire x1="223.52" y1="76.2" x2="220.98" y2="76.2" width="0.1524" layer="91"/>
 <label x="220.98" y="76.2" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J15" gate="J1" pin="G2/BUS2"/>
+<wire x1="134.62" y1="81.28" x2="137.16" y2="81.28" width="0.1524" layer="91"/>
+<label x="137.16" y="81.28" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
