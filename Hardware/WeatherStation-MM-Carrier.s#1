@@ -27989,12 +27989,10 @@ Close only if you know what you're doing.</text>
 <wire x1="347.98" y1="215.9" x2="431.8" y2="215.9" width="0.2032" layer="97" style="longdash"/>
 <text x="287.02" y="271.78" size="2.54" layer="97" align="center">BME280 - Temp, Pressure, Humidity</text>
 <text x="388.62" y="271.78" size="2.54" layer="97" align="center">UV Sensor</text>
-<text x="198.12" y="208.28" size="2.54" layer="97" align="center">Soil Moisture Sensor Connector</text>
+<text x="236.22" y="208.28" size="2.54" layer="97" align="center">Soil Moisture Sensor Connector</text>
 <text x="203.2" y="165.1" size="2.54" layer="97" align="center">Rain</text>
 <text x="269.24" y="165.1" size="2.54" layer="97" align="center">Wind</text>
-<wire x1="167.64" y1="172.72" x2="228.6" y2="172.72" width="0.2032" layer="97" style="longdash"/>
-<wire x1="228.6" y1="172.72" x2="228.6" y2="215.9" width="0.2032" layer="97" style="longdash"/>
-<wire x1="228.6" y1="172.72" x2="299.72" y2="172.72" width="0.2032" layer="97" style="longdash"/>
+<wire x1="167.64" y1="172.72" x2="299.72" y2="172.72" width="0.2032" layer="97" style="longdash"/>
 <wire x1="299.72" y1="172.72" x2="330.2" y2="172.72" width="0.2032" layer="97" style="longdash"/>
 <wire x1="330.2" y1="172.72" x2="330.2" y2="149.86" width="0.2032" layer="97" style="longdash"/>
 <wire x1="330.2" y1="149.86" x2="330.2" y2="106.68" width="0.2032" layer="97" style="longdash"/>
@@ -28298,7 +28296,6 @@ Close only if you know what you're doing.</text>
 <attribute name="VALUE" x="386.08" y="241.046" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
 <instance part="JP4" gate="G$1" x="152.4" y="233.68" smashed="yes" rot="R90">
-<attribute name="NAME" x="149.86" y="231.14" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="154.94" y="228.6" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="R11" gate="G$1" x="152.4" y="220.98" smashed="yes" rot="R90">
@@ -28331,12 +28328,12 @@ Close only if you know what you're doing.</text>
 <instance part="SUPPLY14" gate="G$1" x="381" y="251.46" smashed="yes">
 <attribute name="VALUE" x="381" y="254.254" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND29" gate="1" x="198.12" y="182.88" smashed="yes">
-<attribute name="VALUE" x="198.12" y="182.626" size="1.778" layer="96" align="top-center"/>
+<instance part="GND29" gate="1" x="236.22" y="182.88" smashed="yes">
+<attribute name="VALUE" x="236.22" y="182.626" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="J4" gate="J$1" x="208.28" y="190.5" smashed="yes" rot="R180">
-<attribute name="VALUE" x="210.82" y="197.866" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="210.82" y="184.912" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="J4" gate="J$1" x="246.38" y="190.5" smashed="yes" rot="R180">
+<attribute name="VALUE" x="248.92" y="197.866" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="248.92" y="184.912" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="J7" gate="G$1" x="182.88" y="134.62" smashed="yes" rot="MR180">
 <attribute name="VALUE" x="177.8" y="144.526" size="1.778" layer="96" font="vector" rot="MR180"/>
@@ -28410,7 +28407,6 @@ Close only if you know what you're doing.</text>
 <attribute name="VALUE" x="133.604" y="220.98" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="JP2" gate="G$1" x="132.08" y="233.68" smashed="yes" rot="R90">
-<attribute name="NAME" x="129.54" y="231.14" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="134.62" y="228.6" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="SUPPLY30" gate="G$1" x="132.08" y="241.3" smashed="yes">
@@ -28758,9 +28754,9 @@ Close only if you know what you're doing.</text>
 <wire x1="381" y1="243.84" x2="381" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="200.66" y1="190.5" x2="198.12" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="190.5" x2="236.22" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="GND29" gate="1" pin="GND"/>
-<wire x1="198.12" y1="190.5" x2="198.12" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="190.5" x2="236.22" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="J4" gate="J$1" pin="2"/>
 </segment>
 <segment>
@@ -29508,8 +29504,8 @@ Close only if you know what you're doing.</text>
 </net>
 <net name="SOIL_MOIST_SIG" class="0">
 <segment>
-<wire x1="200.66" y1="187.96" x2="195.58" y2="187.96" width="0.1524" layer="91"/>
-<label x="195.58" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="238.76" y1="187.96" x2="233.68" y2="187.96" width="0.1524" layer="91"/>
+<label x="233.68" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="J4" gate="J$1" pin="3"/>
 </segment>
 <segment>
@@ -29661,9 +29657,9 @@ Close only if you know what you're doing.</text>
 </net>
 <net name="SOIL_MOIST_PWR" class="0">
 <segment>
-<wire x1="200.66" y1="193.04" x2="198.12" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="193.04" x2="236.22" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="J4" gate="J$1" pin="1"/>
-<label x="198.12" y="193.04" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="236.22" y="193.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="134.62" y1="86.36" x2="137.16" y2="86.36" width="0.1524" layer="91"/>

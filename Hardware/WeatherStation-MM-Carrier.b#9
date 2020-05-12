@@ -8426,11 +8426,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="39.52734375" y1="34.61525625" x2="38.9636" y2="35.179" width="0.2032" layer="1"/>
 <wire x1="39.624" y1="15.494" x2="39.624" y2="32.3723" width="0.2032" layer="16"/>
 <wire x1="39.624" y1="32.3723" x2="39.624" y2="34.559515625" width="0.2032" layer="16"/>
-<wire x1="32.65" y1="47.91" x2="33.624" y2="47.91" width="0.2032" layer="1"/>
-<wire x1="33.624" y1="47.91" x2="33.655" y2="47.879" width="0.2032" layer="1"/>
-<via x="33.655" y="47.879" extent="1-16" drill="0.381"/>
-<wire x1="33.655" y1="47.879" x2="33.782" y2="47.752" width="0.2032" layer="16"/>
-<wire x1="33.782" y1="47.752" x2="33.782" y2="32.385" width="0.2032" layer="16"/>
+<wire x1="32.65" y1="47.91" x2="33.751" y2="47.91" width="0.2032" layer="1"/>
+<wire x1="33.751" y1="47.91" x2="33.782" y2="47.879" width="0.2032" layer="1"/>
+<via x="33.782" y="47.879" extent="1-16" drill="0.381"/>
+<wire x1="33.782" y1="47.879" x2="33.782" y2="32.385" width="0.2032" layer="16"/>
 <via x="33.782" y="32.385" extent="1-16" drill="0.381"/>
 <wire x1="39.624" y1="32.3723" x2="39.6113" y2="32.385" width="0.2032" layer="1"/>
 <wire x1="39.6113" y1="32.385" x2="33.782" y2="32.385" width="0.2032" layer="1"/>
@@ -9039,6 +9038,20 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <errors>
 <approved hash="5,1,185b9244a13f9bd8"/>
 <approved hash="5,1,44edd238a14f8762"/>
+<approved hash="5,1,b349959d64e538e7"/>
+<approved hash="5,1,57096856f68dbbf0"/>
+<approved hash="5,1,c7e38832274ba1ff"/>
+<approved hash="5,1,0759bf47403301ed"/>
+<approved hash="19,1,1ad5a5195eda6132"/>
+<approved hash="19,1,8c62fff8172d3f73"/>
+<approved hash="19,1,780d195ca84e1700"/>
+<approved hash="19,1,182c180628322818"/>
+<approved hash="19,1,542c500440304418"/>
+<approved hash="19,1,04440883a208aacd"/>
+<approved hash="19,1,302c30290ad10898"/>
+<approved hash="19,1,2c442074a0b4724d"/>
+<approved hash="19,16,645c677960876f1d"/>
+<approved hash="19,16,64a2732c75ba6e83"/>
 </errors>
 </board>
 </drawing>

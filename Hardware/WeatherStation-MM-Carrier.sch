@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.4.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -28005,6 +28005,7 @@ Close only if you know what you're doing.</text>
 <text x="317.5" y="228.6" size="1.778" layer="97" align="center">Default address: 0x77</text>
 <text x="391.16" y="226.06" size="1.778" layer="97" align="center">I2C address: 0x10</text>
 <text x="391.16" y="200.66" size="1.778" layer="97" align="center">Select SPI mode</text>
+<text x="419.1" y="7.62" size="2.54" layer="94">v01</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>

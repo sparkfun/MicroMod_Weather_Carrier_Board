@@ -17379,8 +17379,8 @@ Close only if you know what you're doing.</text>
 <text x="18.034" y="233.426" size="2.54" layer="97" font="vector" align="center">RTC</text>
 <text x="43.434" y="268.986" size="2.54" layer="97" font="vector" align="center">Voltage Regulation</text>
 <wire x1="0" y1="172.72" x2="55.88" y2="172.72" width="0.2032" layer="97" style="longdash"/>
-<wire x1="55.88" y1="172.72" x2="116.84" y2="172.72" width="0.2032" layer="97" style="longdash"/>
-<wire x1="116.84" y1="172.72" x2="167.64" y2="172.72" width="0.2032" layer="97" style="longdash"/>
+<wire x1="55.88" y1="172.72" x2="121.92" y2="172.72" width="0.2032" layer="97" style="longdash"/>
+<wire x1="121.92" y1="172.72" x2="167.64" y2="172.72" width="0.2032" layer="97" style="longdash"/>
 <wire x1="167.64" y1="172.72" x2="167.64" y2="0" width="0.2032" layer="97" style="longdash"/>
 <wire x1="167.64" y1="172.72" x2="167.64" y2="215.9" width="0.2032" layer="97" style="longdash"/>
 <wire x1="167.64" y1="215.9" x2="167.64" y2="279.4" width="0.2032" layer="97" style="longdash"/>
@@ -17407,8 +17407,8 @@ Close only if you know what you're doing.</text>
 <wire x1="299.72" y1="172.72" x2="330.2" y2="172.72" width="0.2032" layer="97" style="longdash"/>
 <wire x1="330.2" y1="172.72" x2="330.2" y2="149.86" width="0.2032" layer="97" style="longdash"/>
 <wire x1="330.2" y1="149.86" x2="330.2" y2="106.68" width="0.2032" layer="97" style="longdash"/>
-<wire x1="116.84" y1="279.4" x2="116.84" y2="172.72" width="0.2032" layer="97" style="longdash"/>
-<text x="142.24" y="271.78" size="2.54" layer="97" align="center">LEDs</text>
+<wire x1="121.92" y1="279.4" x2="121.92" y2="172.72" width="0.2032" layer="97" style="longdash"/>
+<text x="144.78" y="271.78" size="2.54" layer="97" align="center">LEDs</text>
 <text x="368.3" y="210.82" size="2.54" layer="97" align="center">Lightning Detector</text>
 <wire x1="299.72" y1="215.9" x2="299.72" y2="172.72" width="0.2032" layer="97" style="longdash"/>
 <wire x1="330.2" y1="149.86" x2="431.8" y2="149.86" width="0.2032" layer="97" style="longdash"/>

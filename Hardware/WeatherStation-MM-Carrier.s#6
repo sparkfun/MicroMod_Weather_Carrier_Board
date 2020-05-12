@@ -17997,18 +17997,6 @@ Close only if you know what you're doing.</text>
 <busses>
 </busses>
 <nets>
-<net name="SD_DAT1" class="0">
-<segment>
-<wire x1="190.5" y1="246.38" x2="187.96" y2="246.38" width="0.1524" layer="91"/>
-<label x="187.96" y="246.38" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="J11" gate="G$1" pin="DAT1/NC"/>
-</segment>
-<segment>
-<wire x1="134.62" y1="144.78" x2="137.16" y2="144.78" width="0.1524" layer="91"/>
-<label x="137.16" y="144.78" size="1.27" layer="95" xref="yes"/>
-<pinref part="J15" gate="J1" pin="SDIO_DATA1"/>
-</segment>
-</net>
 <net name="SPI_SCK" class="0">
 <segment>
 <wire x1="190.5" y1="241.3" x2="187.96" y2="241.3" width="0.1524" layer="91"/>
@@ -18029,18 +18017,6 @@ Close only if you know what you're doing.</text>
 <pinref part="U3" gate="G$1" pin="SCL/I2CL"/>
 <wire x1="396.24" y1="187.96" x2="401.32" y2="187.96" width="0.1524" layer="91"/>
 <label x="401.32" y="187.96" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="SD_DAT2" class="0">
-<segment>
-<wire x1="190.5" y1="248.92" x2="187.96" y2="248.92" width="0.1524" layer="91"/>
-<label x="187.96" y="248.92" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="J11" gate="G$1" pin="DAT2/NC"/>
-</segment>
-<segment>
-<wire x1="134.62" y1="142.24" x2="137.16" y2="142.24" width="0.1524" layer="91"/>
-<label x="137.16" y="142.24" size="1.27" layer="95" xref="yes"/>
-<pinref part="J15" gate="J1" pin="SDIO_DATA2"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -18956,7 +18932,7 @@ Close only if you know what you're doing.</text>
 <pinref part="J15" gate="J1" pin="SPI_MISO/SDIO_DATA0"/>
 </segment>
 </net>
-<net name="SPI_!CS!" class="0">
+<net name="SD_!CS!" class="0">
 <segment>
 <wire x1="190.5" y1="251.46" x2="187.96" y2="251.46" width="0.1524" layer="91"/>
 <label x="187.96" y="251.46" size="1.27" layer="95" rot="R180" xref="yes"/>
