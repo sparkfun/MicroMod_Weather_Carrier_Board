@@ -9419,10 +9419,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="PROD_ID" value="CAP-00811" x="8.89" y="17.78" size="1.778" layer="27" font="vector" ratio="15" rot="R180" display="off"/>
 <attribute name="VALUE" x="8.89" y="18.923" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R9" library="SparkFun-Resistors" package="0603" value="10k" x="15.24" y="15.24" smashed="yes" rot="R90">
-<attribute name="NAME" x="14.478" y="15.24" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-00824" x="15.24" y="15.24" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
-<attribute name="VALUE" x="16.002" y="15.24" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
+<element name="R9" library="SparkFun-Resistors" package="0603" value="10k" x="15.621" y="15.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="14.859" y="15.24" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center"/>
+<attribute name="PROD_ID" value="RES-00824" x="15.621" y="15.24" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
+<attribute name="VALUE" x="16.383" y="15.24" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
 </element>
 <element name="R10" library="SparkFun-Resistors" package="0603" value="20k" x="13.335" y="15.24" smashed="yes" rot="R270">
 <attribute name="NAME" x="14.097" y="15.24" size="0.6096" layer="25" font="vector" ratio="20" rot="R270" align="bottom-center"/>
@@ -9859,8 +9859,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="45.0874" y1="47.3216" x2="44.3724" y2="47.3216" width="0.2032" layer="1"/>
 <wire x1="44.3724" y1="47.3216" x2="44.323" y2="47.371" width="0.2032" layer="1"/>
 <wire x1="42.1984" y1="45.9396" x2="42.164" y2="45.974" width="0.2032" layer="1"/>
-<wire x1="41.2634" y1="46.6716" x2="42.2284" y2="46.6716" width="0.2032" layer="1"/>
-<wire x1="42.2284" y1="46.6716" x2="42.291" y2="46.609" width="0.2032" layer="1"/>
 <contactref element="J15" pad="33"/>
 <contactref element="J15" pad="36"/>
 <contactref element="J15" pad="75"/>
@@ -9920,8 +9918,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="17.526" y="10.541" extent="1-16" drill="0.3048"/>
 <via x="7.62" y="5.08" extent="1-16" drill="0.3048"/>
 <via x="7.366" y="14.986" extent="1-16" drill="0.3048"/>
-<wire x1="42.291" y1="46.609" x2="42.164" y2="45.974" width="0" layer="19" extent="1-1"/>
-<wire x1="15.24" y1="14.39" x2="12.319" y2="13.97" width="0" layer="19" extent="1-1"/>
+<via x="14.478" y="14.097" extent="1-16" drill="0.3048"/>
+<wire x1="41.2634" y1="46.6716" x2="41.4664" y2="46.6716" width="0.2032" layer="1"/>
+<wire x1="41.4664" y1="46.6716" x2="42.164" y2="45.974" width="0.2032" layer="1"/>
 </signal>
 <signal name="3.3V">
 <contactref element="D7" pad="A"/>
@@ -10423,10 +10422,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="VIN/3">
 <contactref element="R9" pad="2"/>
 <contactref element="R10" pad="1"/>
-<wire x1="13.335" y1="16.09" x2="15.24" y2="16.09" width="0.2032" layer="1"/>
-<wire x1="13.335" y1="23.368" x2="13.97" y2="24.003" width="0.2032" layer="1"/>
+<wire x1="13.335" y1="16.09" x2="15.621" y2="16.09" width="0.2032" layer="1"/>
+<wire x1="13.208" y1="23.241" x2="13.97" y2="24.003" width="0.2032" layer="1"/>
 <wire x1="13.97" y1="24.003" x2="16.637" y2="24.003" width="0.2032" layer="1"/>
-<wire x1="13.335" y1="16.09" x2="13.335" y2="23.368" width="0.2032" layer="1"/>
+<wire x1="13.335" y1="16.09" x2="13.208" y2="16.217" width="0.2032" layer="1"/>
+<wire x1="13.208" y1="23.241" x2="13.208" y2="16.217" width="0.2032" layer="1"/>
 <wire x1="17.57" y1="23.07" x2="16.637" y2="24.003" width="0.2032" layer="1"/>
 <contactref element="J15" pad="49"/>
 <wire x1="18.855" y1="23.07" x2="17.57" y2="23.07" width="0.2032" layer="1"/>
