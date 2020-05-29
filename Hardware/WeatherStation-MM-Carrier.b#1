@@ -10977,7 +10977,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="49.53" y="33.909" extent="1-16" drill="0.3048"/>
 <via x="48.895" y="21.844" extent="1-16" drill="0.3048"/>
 <via x="47.879" y="19.05" extent="1-16" drill="0.3048"/>
-<wire x1="49.022" y1="19.565" x2="47.879" y2="19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="49.022" y1="19.565" x2="48.394" y2="19.565" width="0.3048" layer="1"/>
+<wire x1="48.394" y1="19.565" x2="47.879" y2="19.05" width="0.3048" layer="1"/>
 </signal>
 <signal name="3.3V">
 <contactref element="D7" pad="A"/>

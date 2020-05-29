@@ -10741,7 +10741,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="U$26" library="buzzard_labels" package="SENSOR7" value="" x="39.624" y="41.91" smashed="yes"/>
 <element name="U$34" library="buzzard_labels" package="SENSOR7" value="" x="27.686" y="42.418" smashed="yes"/>
 <element name="U$62" library="buzzard_labels" package="UV6" value="" x="29.083" y="43.688" smashed="yes"/>
-<element name="U$3" library="buzzard_labels (2)" package="RAIN1" value="" x="50.546" y="10.922" smashed="yes" rot="R90"/>
+<element name="U$3" library="buzzard_labels (2)" package="RAIN1" value="" x="50.546" y="10.795" smashed="yes" rot="R90"/>
 <element name="U$65" library="buzzard_labels (2)" package="SOIL_MOISTURE2" value="" x="50.673" y="36.322" smashed="yes" rot="R90"/>
 <element name="U$66" library="buzzard_labels (2)" package="WIND0" value="" x="50.546" y="25.273" smashed="yes" rot="R90"/>
 <element name="J15" library="SparkFun-MicroMod" package="M.2-CONNECTOR-E" value="MICROMOD-2222-C" x="24.13" y="20.32" smashed="yes" rot="R270">
