@@ -2,9 +2,9 @@
   MicroMod Weather Carrier Board Test
 
   To Be Tested:
-  Stat led
-  BME280 - temp, pressure, humidity (I2C)
-  VEML6075 - UV sensor (I2C)
+  DONE: Stat led
+  DONE: BME280 - temp, pressure, humidity (I2C)
+  DONE: VEML6075 - UV sensor (I2C)
   AS3935 - lightning detector (SPI)
   Soil moisture connector?
   Rain and Wind meters?
