@@ -8,13 +8,13 @@
   AS3935 - lightning detector (SPI)
   DONE: Soil moisture connector
   DONE: Wind Meter
-  Rain Meter
+  DONE: Rain Meter
   DONE: uSD card
   Other
     PWM0/1 -- 1 doesn't work
     DONE: Qwiic Connector
     TX/RX 1/2 -- tested in separate sketch, need diff PB to test TX/RX2
-    VIN/3
+    VIN/3 -- doesn't work
 */
 
 #include <Wire.h>
@@ -34,22 +34,30 @@ int STAT_LED = 19;
 int moist_val = 0;  //Variable for storing moisture value
 int soilPin = A32;  //Pin number that measures analog moisture signal
 int soilPower = A16;  //Pin number that will power the soil moisture sensor
+
 int WSPEED = 1; //Digital I/O pin for wind speed
 int WDIR = A35; //Analog pin for wind direction
 int RAIN = 2;   //Digital I/O pin for rain fall
+volatile bool rain_flag = false;
+volatile bool wind_flag = false;
+
 const int SD_chipSelect = 23;
 //const int SD_chipSelect = CS; //Chip select pin for SD card
+const int PIN_PWM0 = 44;
+const int PIN_PWM1 = 45;
 
+
+//TODO: change IRQ's to return flags, variables need to be declared volatile
 //Function is called every time the rain bucket tips
 void rainIRQ()
 {
-  Serial.println("RAIN!");
+  rain_flag = true;
 }
 
 //Function is called when the magnet in the anemometer is activated
 void wspeedIRQ()
 {
-  Serial.println("Wind click!");
+  wind_flag = true;
 }
 
 void setup() {
@@ -76,8 +84,8 @@ void setup() {
   pinMode(WSPEED, INPUT_PULLUP);  //Input from wind meters windspeed sensor
   pinMode(RAIN, INPUT_PULLUP);    //Input from wind meters rain gauge sensor
   //attach external interrupt pins to IRQ functions
-  attachInterrupt(0, rainIRQ, FALLING);
-  attachInterrupt(1, wspeedIRQ, FALLING);
+  attachInterrupt(digitalPinToInterrupt(RAIN), rainIRQ, FALLING);
+  attachInterrupt(digitalPinToInterrupt(WSPEED), wspeedIRQ, FALLING);
   //turn on interrupts
   interrupts();
 
@@ -111,13 +119,22 @@ void loop() {
   Serial.print("Wind direction: ");
   Serial.print(get_wind_direction());
   Serial.println(" degrees");
+  //Check interrupt flags
+  if (rain_flag == true){
+    Serial.println("RRRRRAAAAIIIINNN!!!");
+    rain_flag = false;
+  }
+  if (wind_flag == true){
+    Serial.println("Wind click!");
+    wind_flag = false;
+  }
   
   digitalWrite(STAT_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1000);                       // wait for a second
   digitalWrite(STAT_LED, LOW);    // turn the LED off by making the voltage LOW
   delay(1000);                       // wait for a second
 
-  delay(5000);
+  delay(2000);
 }
 
 void testSD() {
@@ -217,14 +234,14 @@ void testRemainingPeripherals() {
   
   //Test PWM0/1
   Serial.println("Test PWM0/1. Use multimeter to verify.");
-  analogWrite(44, 125);
-//  analogWrite(45, 125); //TODO: this one doesn't work
+  analogWrite(PIN_PWM0, 125);
+//  analogWrite(PIN_PWM1, 125); //TODO: this one doesn't work
   Serial.println();
 
   //Test VIN/3
   Serial.println("VIN/3 Test");
   analogReadResolution(14);
-  int temp = analogRead(A31);
+  int temp = analogRead(31);
 //  temp = (temp * 3 * 2)/16384;
   Serial.println(temp);
 }
