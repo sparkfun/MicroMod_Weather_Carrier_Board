@@ -5,7 +5,7 @@
   DONE: Stat led
   DONE: BME280 - temp, pressure, humidity (I2C)
   DONE: VEML6075 - UV sensor (I2C)
-  AS3935 - lightning detector (SPI)
+  DONE: AS3935 - lightning detector (SPI) -- tested in separate sketch
   DONE: Soil moisture connector
   DONE: Wind Meter
   DONE: Rain Meter
@@ -47,7 +47,6 @@ const int PIN_PWM0 = 44;
 const int PIN_PWM1 = 45;
 
 
-//TODO: change IRQ's to return flags, variables need to be declared volatile
 //Function is called every time the rain bucket tips
 void rainIRQ()
 {
