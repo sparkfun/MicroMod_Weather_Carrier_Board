@@ -143,7 +143,7 @@ void testSD() {
   if (!card.init(SPI_HALF_SPEED, SD_chipSelect)) {
     Serial.println("initialization failed. Things to check:");
     Serial.println("* is a card inserted?");
-    Serial.println("* is your wiring correc?");
+    Serial.println("* is your wiring correct?");
     Serial.println("* did you change the chipSelect pin to match your module?");
     while(1);
   } else {
@@ -172,7 +172,7 @@ void testSD() {
     while(1);
   }
   
-  //print the type and size of hte first FAT-type volume
+  //print the type and size of the first FAT-type volume
   uint32_t volumesize;
   Serial.print("Volume type is:     FAT");
   Serial.println(volume.fatType(), DEC);
