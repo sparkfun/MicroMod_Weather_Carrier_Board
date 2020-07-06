@@ -29517,14 +29517,14 @@ remove power LEDs.</text>
 </net>
 <net name="SOIL_MOIST_SIG" class="0">
 <segment>
-<wire x1="231.14" y1="187.96" x2="226.06" y2="187.96" width="0.1524" layer="91"/>
-<label x="226.06" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="J4" gate="J$1" pin="3"/>
-</segment>
-<segment>
 <wire x1="134.62" y1="121.92" x2="137.16" y2="121.92" width="0.1524" layer="91"/>
 <label x="137.16" y="121.92" size="1.27" layer="95" xref="yes"/>
 <pinref part="J15" gate="J1" pin="A0"/>
+</segment>
+<segment>
+<pinref part="J4" gate="J$1" pin="1"/>
+<wire x1="231.14" y1="193.04" x2="228.6" y2="193.04" width="0.1524" layer="91"/>
+<label x="228.6" y="193.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="RAIN" class="0">
@@ -29662,14 +29662,14 @@ remove power LEDs.</text>
 </net>
 <net name="SOIL_MOIST_PWR" class="0">
 <segment>
-<wire x1="231.14" y1="193.04" x2="228.6" y2="193.04" width="0.1524" layer="91"/>
-<pinref part="J4" gate="J$1" pin="1"/>
-<label x="228.6" y="193.04" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <wire x1="134.62" y1="86.36" x2="137.16" y2="86.36" width="0.1524" layer="91"/>
 <label x="137.16" y="86.36" size="1.27" layer="95" xref="yes"/>
 <pinref part="J15" gate="J1" pin="G0/BUS0"/>
+</segment>
+<segment>
+<pinref part="J4" gate="J$1" pin="3"/>
+<wire x1="231.14" y1="187.96" x2="226.06" y2="187.96" width="0.1524" layer="91"/>
+<label x="226.06" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$8" class="0">
