@@ -15,7 +15,7 @@ void rainIRQ() {
 
 //Function is called every time the rain bucket tips
 void wspeedIRQ() {
-  rain_flag = true;
+  wind_flag = true;
 }
 
 void setup() {
@@ -47,6 +47,7 @@ void loop() {
     Serial.println("Wind click!");
     wind_flag = false;
   }
+  delay(1000);
 }
 
 int get_wind_direction()
