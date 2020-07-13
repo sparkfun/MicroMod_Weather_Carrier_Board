@@ -3,7 +3,7 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
@@ -41,7 +41,7 @@
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
 <layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
@@ -187,6 +187,11 @@
 <text x="35.56" y="36.83" size="0.254" layer="20" font="vector" ratio="15" rot="R90">ROUTE OUT</text>
 <text x="40.64" y="39.37" size="0.254" layer="20" font="vector" ratio="15" rot="R270">ROUTE OUT</text>
 <text x="36.83" y="-21.59" size="1.778" layer="51" font="vector" ratio="15">Priyanka Makin</text>
+<wire x1="58.42" y1="50.8" x2="58.42" y2="40.64" width="9.00000625" layer="48"/>
+<wire x1="58.42" y1="40.64" x2="55.88" y2="35.56" width="9.00000625" layer="48"/>
+<wire x1="55.88" y1="35.56" x2="55.88" y2="12.7" width="9.00000625" layer="48"/>
+<text x="71.12" y="40.64" size="1.778" layer="48" font="vector" ratio="15">Selective Solder Nozzle Width:
+0.354331</text>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
@@ -10986,10 +10991,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="NAME" x="33.02" y="46.863" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="33.02" y="44.577" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="JP5" library="SparkFun-Jumpers" package="SMT-JUMPER_3_2-NC_TRACE_SILK" package3d_urn="urn:adsk.eagle:package:39289/1" value="VIN/3" x="13.97" y="16.383" smashed="yes" rot="MR0">
-<attribute name="NAME" x="13.97" y="17.526" size="0.6096" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
-<attribute name="VALUE" x="13.97" y="15.24" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
-</element>
 <element name="U$44" library="SparkFun-Aesthetics" package="SFE_LOGO_FLAME_.2" value="" x="24.384" y="43.815" smashed="yes"/>
 <element name="U$58" library="buzzard_labels (3)" package="WEATHER4" value="" x="38.862" y="19.05" smashed="yes" rot="MR0"/>
 <element name="U$20" library="buzzard_labels (73)" package="ATMOSPHERIC0" value="" x="32.766" y="34.417" smashed="yes"/>
@@ -11721,13 +11722,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="17.57" y1="23.07" x2="16.637" y2="24.003" width="0.2032" layer="1"/>
 <contactref element="J15" pad="49"/>
 <wire x1="18.855" y1="23.07" x2="17.57" y2="23.07" width="0.2032" layer="1"/>
-<contactref element="JP5" pad="2"/>
-<wire x1="13.97" y1="16.383" x2="13.97" y2="17.272" width="0.2032" layer="16"/>
-<wire x1="13.030946875" y1="18.211053125" x2="13.030946875" y2="22.301946875" width="0.2032" layer="16"/>
-<via x="13.030946875" y="22.301946875" extent="1-16" drill="0.3048"/>
-<wire x1="13.030946875" y1="22.301946875" x2="13.030946875" y2="23.063946875" width="0.2032" layer="1"/>
-<wire x1="13.97" y1="17.272" x2="13.030946875" y2="18.211053125" width="0.2032" layer="16"/>
-<wire x1="13.030946875" y1="23.063946875" x2="13.97" y2="24.003" width="0.2032" layer="1"/>
+<wire x1="13.335" y1="16.09" x2="13.335" y2="23.368" width="0.2032" layer="1"/>
+<wire x1="13.335" y1="23.368" x2="13.97" y2="24.003" width="0.2032" layer="1"/>
+<contactref element="R9" pad="2"/>
+<contactref element="R10" pad="1"/>
+<wire x1="13.335" y1="16.09" x2="15.621" y2="16.09" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="MEAS" pad="3"/>
@@ -12107,25 +12106,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="30.16" y1="46.07" x2="30.2433" y2="45.9867" width="0.2032" layer="1"/>
 <wire x1="30.2433" y1="45.9867" x2="31.5102875" y2="45.9867" width="0.2032" layer="1"/>
 </signal>
-<signal name="N$9">
-<contactref element="JP5" pad="3"/>
-<contactref element="R10" pad="1"/>
-<wire x1="13.335" y1="16.09" x2="12.485" y2="15.24" width="0.2032" layer="1"/>
-<wire x1="12.485" y1="15.24" x2="12.319" y2="15.24" width="0.2032" layer="1"/>
-<via x="12.319" y="15.24" extent="1-16" drill="0.3048"/>
-<wire x1="12.319" y1="15.24" x2="12.9286" y2="15.8496" width="0.2032" layer="16"/>
-<wire x1="12.9286" y1="15.8496" x2="12.9286" y2="16.383" width="0.2032" layer="16"/>
-</signal>
-<signal name="N$12">
-<contactref element="R9" pad="2"/>
-<contactref element="JP5" pad="1"/>
-<wire x1="15.621" y1="16.09" x2="14.658709375" y2="15.127709375" width="0.2032" layer="1"/>
-<wire x1="14.658709375" y1="15.127709375" x2="14.590290625" y2="15.127709375" width="0.2032" layer="1"/>
-<via x="14.590290625" y="15.127709375" extent="1-16" drill="0.3048"/>
-<wire x1="14.590290625" y1="15.127709375" x2="14.971290625" y2="15.508709375" width="0.2032" layer="16"/>
-<wire x1="14.971290625" y1="16.342890625" x2="14.971290625" y2="15.508709375" width="0.2032" layer="16"/>
-<wire x1="14.971290625" y1="16.342890625" x2="15.0114" y2="16.383" width="0.2032" layer="16"/>
-</signal>
 <signal name="VREG_EN">
 <contactref element="U5" pad="5"/>
 <contactref element="D1" pad="C"/>
@@ -12184,6 +12164,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </board>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets

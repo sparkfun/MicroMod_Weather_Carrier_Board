@@ -113,7 +113,7 @@ void testRemainingFunctions() {
   //Test VIN/3
   Serial.println("VIN/3 Test");
   analogReadResolution(14);   //Change resolution to 14 bits
-  int temp = analogRead(31);
-//  temp = (temp * 3 * 2)/16384;
-  Serial.println(temp);
+  int temp = analogRead(A31);
+  float calc_temp = (float)(temp * 4.6)/16384;
+  Serial.println(calc_temp);
 }

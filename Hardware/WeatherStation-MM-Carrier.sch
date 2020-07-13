@@ -28033,7 +28033,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="J9" library="SparkFun-Connectors" deviceset="CONN_02" device="1X02_NO_SILK"/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".2_INCH"/>
 <part name="JP3" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value="UV"/>
-<part name="JP5" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_2-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39289/1" value="VIN/3"/>
 <part name="JP6" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="VE"/>
 </parts>
 <sheets>
@@ -28260,9 +28259,9 @@ remove power LEDs.</text>
 <attribute name="NAME" x="138.176" y="15.24" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="141.224" y="15.24" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="R10" gate="G$1" x="139.7" y="40.64" smashed="yes" rot="R90">
-<attribute name="NAME" x="138.176" y="40.64" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="141.224" y="40.64" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R10" gate="G$1" x="139.7" y="30.48" smashed="yes" rot="R90">
+<attribute name="NAME" x="138.176" y="30.48" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="141.224" y="30.48" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="GND11" gate="1" x="139.7" y="5.08" smashed="yes">
 <attribute name="VALUE" x="139.7" y="4.826" size="1.778" layer="96" align="top-center"/>
@@ -28276,8 +28275,8 @@ remove power LEDs.</text>
 <instance part="SUPPLY18" gate="G$1" x="83.82" y="208.28" smashed="yes">
 <attribute name="VALUE" x="83.82" y="211.074" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY19" gate="G$1" x="139.7" y="48.26" smashed="yes">
-<attribute name="VALUE" x="139.7" y="51.054" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY19" gate="G$1" x="139.7" y="38.1" smashed="yes">
+<attribute name="VALUE" x="139.7" y="40.894" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="MEAS" gate="JP1" x="106.68" y="259.08" smashed="yes">
 <attribute name="NAME" x="104.648" y="260.858" size="1.778" layer="95" font="vector"/>
@@ -28642,9 +28641,6 @@ remove power LEDs.</text>
 <instance part="LOGO1" gate="G$1" x="353.06" y="55.88" smashed="yes"/>
 <instance part="JP3" gate="G$1" x="381" y="256.54" smashed="yes" rot="R90">
 <attribute name="VALUE" x="383.54" y="255.016" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
-</instance>
-<instance part="JP5" gate="G$1" x="139.7" y="27.94" smashed="yes" rot="R180">
-<attribute name="VALUE" x="136.779" y="30.48" size="1.778" layer="96" font="vector" rot="R270" align="top-left"/>
 </instance>
 <instance part="JP6" gate="G$1" x="35.56" y="241.3" smashed="yes" rot="R90">
 <attribute name="VALUE" x="30.48" y="241.3" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
@@ -29384,7 +29380,7 @@ remove power LEDs.</text>
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
 <pinref part="SUPPLY19" gate="G$1" pin="5V"/>
-<wire x1="139.7" y1="48.26" x2="139.7" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="38.1" x2="139.7" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="88.9" y1="134.62" x2="86.36" y2="134.62" width="0.1524" layer="91"/>
@@ -29404,9 +29400,13 @@ remove power LEDs.</text>
 <pinref part="J15" gate="J1" pin="BATT_VIN/3"/>
 </segment>
 <segment>
-<pinref part="JP5" gate="G$1" pin="2"/>
-<wire x1="144.78" y1="27.94" x2="147.32" y2="27.94" width="0.1524" layer="91"/>
-<label x="147.32" y="27.94" size="1.27" layer="95" xref="yes"/>
+<pinref part="R9" gate="G$1" pin="2"/>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="20.32" x2="139.7" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="22.86" x2="139.7" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="22.86" x2="142.24" y2="22.86" width="0.1524" layer="91"/>
+<junction x="139.7" y="22.86"/>
+<label x="142.24" y="22.86" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -29771,20 +29771,6 @@ remove power LEDs.</text>
 <wire x1="383.54" y1="248.92" x2="381" y2="248.92" width="0.1524" layer="91"/>
 <pinref part="JP3" gate="G$1" pin="1"/>
 <wire x1="381" y1="248.92" x2="381" y2="251.46" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="JP5" gate="G$1" pin="3"/>
-<pinref part="R10" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="33.02" x2="139.7" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="R9" gate="G$1" pin="2"/>
-<pinref part="JP5" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="20.32" x2="139.7" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VREG_EN" class="0">
