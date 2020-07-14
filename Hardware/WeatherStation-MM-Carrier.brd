@@ -39,7 +39,7 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
@@ -10766,13 +10766,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="1.905" y1="32.131" x2="1.905" y2="33.335" width="0.2032" layer="1"/>
 <wire x1="1.905" y1="33.335" x2="1.96" y2="33.39" width="0.2032" layer="1"/>
 <wire x1="42.1984" y1="48.9086" x2="42.1984" y2="48.1674" width="0.2032" layer="1"/>
-<wire x1="42.1984" y1="48.1674" x2="42.164" y2="48.133" width="0.2032" layer="1"/>
 <wire x1="43.4984" y1="48.9086" x2="43.4984" y2="48.1956" width="0.2032" layer="1"/>
-<wire x1="43.4984" y1="48.1956" x2="43.561" y2="48.133" width="0.2032" layer="1"/>
 <wire x1="45.0874" y1="47.9716" x2="44.3574" y2="47.9716" width="0.2032" layer="1"/>
-<wire x1="44.3574" y1="47.9716" x2="44.323" y2="48.006" width="0.2032" layer="1"/>
 <wire x1="45.0874" y1="47.3216" x2="44.3724" y2="47.3216" width="0.2032" layer="1"/>
-<wire x1="44.3724" y1="47.3216" x2="44.323" y2="47.371" width="0.2032" layer="1"/>
 <wire x1="42.1984" y1="46.5746" x2="42.164" y2="46.609" width="0.2032" layer="1"/>
 <contactref element="J15" pad="33"/>
 <contactref element="J15" pad="36"/>
