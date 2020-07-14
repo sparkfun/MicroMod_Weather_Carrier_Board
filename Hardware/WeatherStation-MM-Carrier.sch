@@ -23010,6 +23010,27 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
+<deviceset name="3.3KOHM" prefix="R">
+<description>&lt;h3&gt;3.3kΩ resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-07851"/>
+<attribute name="VALUE" value="3.3k"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="1KOHM" prefix="R">
 <description>&lt;h3&gt;1kΩ resistor&lt;/h3&gt;
 &lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
@@ -27897,7 +27918,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY25" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="BT1" library="SparkFun-Batteries" deviceset="ML414H_IV01E_BATTERY" device="" value="ML414H"/>
 <part name="D6" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-BAT60A" value="3A/10V/280mV"/>
-<part name="R8" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" value="1k"/>
+<part name="R8" library="SparkFun-Resistors" deviceset="3.3KOHM" device="-0603-1/10W-1%" value="3.3k"/>
 <part name="GND51" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY26" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="D7" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-BAT20J" value="1A/23V/620mV"/>
