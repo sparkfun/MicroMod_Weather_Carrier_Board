@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.4.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
@@ -40,7 +40,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
@@ -11801,15 +11801,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <approved hash="19,1,10c111a2f5c2f4a1"/>
 <approved hash="19,1,d721d1ee8d8e8b41"/>
 <approved hash="19,1,ea19e836b456b679"/>
-<approved hash="5,1,b052effadff5e713"/>
-<approved hash="5,1,c612f82aebbef0c4"/>
-<approved hash="5,1,09f071f1f8d9d8f8"/>
-<approved hash="19,1,c1f55dd9885d37c7"/>
-<approved hash="19,1,85a98ca2b46727fe"/>
-<approved hash="19,1,391474c0557b8ef0"/>
-<approved hash="19,1,aa41fb4ec100b222"/>
-<approved hash="19,1,6cddd2c7a6aa07d4"/>
-<approved hash="19,1,58ea8bcadbdd29fb"/>
+<approved hash="5,1,115f74939ee01cfe"/>
+<approved hash="5,1,970cd25c85c727e4"/>
+<approved hash="5,1,f406f25f65a0d920"/>
+<approved hash="19,1,234e8b15fd09a8ee"/>
+<approved hash="19,1,31bdf48a24551c0e"/>
+<approved hash="19,1,1e4ce6abb1beb732"/>
+<approved hash="19,1,d69a31b0bfd70c7d"/>
+<approved hash="19,1,7c57430479a0c535"/>
+<approved hash="19,1,31fe01a272fdbe87"/>
 </errors>
 </board>
 </drawing>
