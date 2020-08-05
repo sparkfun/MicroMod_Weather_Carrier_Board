@@ -10,7 +10,12 @@
 
 BME280 tempSensor;
 
+//LED pin
+#if defined(ARDUINO_ARCH_APOLLO3)
 int STAT_LED = 19;
+#elif defined(ESP_PLATFORM)
+int STAT_LED = 5;
+#endif
 
 void setup() {
   Serial.begin(115200);

@@ -23,9 +23,13 @@
 
 SparkFun_AS3935 lightning;
 
-// Interrupt pin for lightning detection 
-const int lightningInt = 27; 
+#if defined(ARDUINO_ARCH_APOLLO3) 
+const int lightningInt = 27; // Interrupt pin for lightning detection
 int spiCS = A33; //SPI chip select pin
+#elif defined(ESP_PLATFORM)
+const int lightningInt = 17;
+int spiCS = 12;
+#endif
 
 // This variable holds the number representing the lightning or non-lightning
 // event issued by the lightning detector. 

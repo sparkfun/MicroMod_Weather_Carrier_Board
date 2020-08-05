@@ -3,7 +3,11 @@
 void setup()
 {
   Serial.begin(115200);
+  #if defined(ESP_PLATFORM)
+  Serial1.begin(115200, SERIAL_8N1, 16, 17);
+  #else
   Serial1.begin(115200);
+  #endif
 //  Serial2.begin(115200);
 
   while (!Serial); // Wait for user to run python script or open serial monitor

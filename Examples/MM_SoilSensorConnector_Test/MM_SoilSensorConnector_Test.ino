@@ -2,10 +2,17 @@
  *  MicroMod Weather Carrier Board Soil Moisture Connector Test
  */
 
+#if defined(ARDUINO_ARCH_APOLLO3)
 int STAT_LED = 19;
-int moist_val = 0;  //Variable for storing moisture value
 int soilPin = A32;  //Pin number that measures analog moisture signal
 int soilPower = A16;  //Pin number that will power the soil moisture sensor
+#elif defined(ESP_PLATFORM)
+int STAT_LED = 5;
+int soilPin = 34;
+int soilPower = 4;
+#endif
+
+int moist_val = 0;  //Variable for storing moisture value
 
 void setup() {
   Serial.begin(115200);
@@ -21,6 +28,7 @@ void loop() {
   digitalWrite(STAT_LED, HIGH);
   Serial.print("Soil Moisture = ");
   Serial.println(readSoil());
+  Serial.println();
 
   digitalWrite(STAT_LED, LOW);
   delay(1000);

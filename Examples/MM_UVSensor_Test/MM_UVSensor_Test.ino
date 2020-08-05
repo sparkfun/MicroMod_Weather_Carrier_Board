@@ -9,12 +9,16 @@
 
 VEML6075 uv;
 
+//LED pin
+#if defined(ARDUINO_ARCH_APOLLO3)
 int STAT_LED = 19;
+#elif defined(ESP_PLATFORM)
+int STAT_LED = 5;
+#endif
 
 void setup() {
   Serial.begin(115200);
   Serial.println("MicroMod Weather Carrier Board Test - VEML6075");
-  Serial.println();
 
   Wire.begin(); //Join I2C bus
 
@@ -24,6 +28,9 @@ void setup() {
   }
 
   pinMode(STAT_LED, OUTPUT);
+  Serial.println("UVA, UVB, UV Index");
+  Serial.println();
+
 }
 
 void loop() {

@@ -2,9 +2,16 @@
  * MicroMod Weather Carrier Board Weather Meter Test
  */
 
+#if defined(ARDUINO_ARCH_APOLLO3)
 int WSPEED = 1; //Digital I/O pin for wind speed
 int WDIR = A35; //Analog pin for wind direction
 int RAIN = 2; //Digital I/O pin for rain fall
+#elif defined(ESP_PLATFORM)
+int WSPEED = 23;
+int WDIR = 35;
+int RAIN = 27;
+#endif
+
 volatile bool rain_flag = false;
 volatile bool wind_flag = false;
 
