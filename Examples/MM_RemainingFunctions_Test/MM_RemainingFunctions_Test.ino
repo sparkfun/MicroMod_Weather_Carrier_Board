@@ -15,12 +15,14 @@
 #include <SparkFun_Alphanumeric_Display.h>
 
 #if defined(ARDUINO_ARCH_APOLLO3)
+#define ANALOG_RESOLUTION 14
 int STAT_LED = 19;
 const int SD_chipSelect = 23;
 const int PIN_PWM0 = 44;
 const int PIN_PWM1 = 45;
 const int PIN_VIN3 = A31;
 #elif defined(ESP_PLATFORM)
+#define ANALOG_RESOLUTION 12
 int STAT_LED = 5;
 const int SD_chipSelect = 13;
 const int PIN_PWM0 = 18;
@@ -32,12 +34,13 @@ const int resolution = 8;
 const int PIN_VIN3 = 39;
 #endif
 
+int maxADCValue = pow(2, ANALOG_RESOLUTION);
+
 //Sd2Card card;
 //SdVolume volume;
 HT16K33 display;  //For testing the qwiic connector
 
 void testRemainingFunctions() {
-  Serial.println();
   //Test Qwiic connector
   Serial.println("Test Qwiic Connector");
   if (display.begin() == false) {
@@ -49,7 +52,7 @@ void testRemainingFunctions() {
   Serial.println();
 
   //Test PWM0/1
-  Serial.println("Test PWM0/1. Use multimeter to verify.");
+  Serial.println("Test PWM0/1. Use multimeter to verify voltage is 1.6V.");
   #if defined(ESP_PLATFORM)
   ledcWrite(LEDC_CHANNEL_0, 125);
   ledcWrite(LEDC_CHANNEL_1, 125);
@@ -60,10 +63,21 @@ void testRemainingFunctions() {
   Serial.println();
 
   //Test VIN/3
-  Serial.println("VIN/3 Test");
-  analogReadResolution(14);   //Change resolution to 14 bits
+  Serial.println("VIN/3 Test. This is the input voltage/3. Should be 1.6V.");
   int temp = analogRead(PIN_VIN3);
-  float calc_temp = (float)(temp * 4.6)/16384;
+  float correctionValue = 5.0;
+  #if defined(ARDUINO_ARCH_APOLLO3)
+  correctionValue = 4.6;
+  #elif defined(ESP_PLATFORM)
+  correctionValue = 3.3;
+  #endif
+  Serial.println(temp);
+  float calc_temp = (float)(temp * correctionValue) / maxADCValue;
+  #if defined(ESP_PLATFORM)
+  //Need to add offset for ESP32.
+  //See: https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/05/ADC-non-linear-ESP32.png?w=768&ssl=1
+  calc_temp = calc_temp + 0.15;
+  #endif
   Serial.println(calc_temp);
 }
 
@@ -76,13 +90,16 @@ void setup() {
 
   pinMode(STAT_LED, OUTPUT);
 
+  //Set up for PWM
   #if defined(ESP_PLATFORM)
   ledcSetup(LEDC_CHANNEL_0, freq, resolution);
   ledcSetup(LEDC_CHANNEL_1, freq, resolution);
   ledcAttachPin(PIN_PWM0, LEDC_CHANNEL_0);
   ledcAttachPin(PIN_PWM1, LEDC_CHANNEL_1);
   #endif
-  
+
+  analogReadResolution(ANALOG_RESOLUTION);
+
 //  testSD();
   testRemainingFunctions();
 }
