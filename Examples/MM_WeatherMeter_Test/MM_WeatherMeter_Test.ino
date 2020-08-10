@@ -10,6 +10,10 @@ int RAIN = 2; //Digital I/O pin for rain fall
 int WSPEED = 23;
 int WDIR = 35;
 int RAIN = 27;
+#elif defined(ARDUINO_ARCH_SAMD)
+int WSPEED = 0;
+int WDIR = A1;
+int RAIN = 1;
 #endif
 
 volatile bool rain_flag = false;
@@ -27,6 +31,8 @@ void wspeedIRQ() {
 
 void setup() {
   Serial.begin(115200);
+  while (!Serial);  //Wait for user to open serial monitor
+  
   Serial.println("MicroMod Weather Carrier Board Test - Weather Meter");
   Serial.println();
 

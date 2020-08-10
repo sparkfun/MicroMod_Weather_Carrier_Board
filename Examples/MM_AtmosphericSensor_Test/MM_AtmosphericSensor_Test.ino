@@ -21,6 +21,8 @@ int STAT_LED = 13;
 
 void setup() {
   Serial.begin(115200);
+  while (!Serial);  //Wait for user to open serial monitor
+  
   Serial.println("MicroMod Weather Carrier Board - BME280 Test");
   Serial.println();
 

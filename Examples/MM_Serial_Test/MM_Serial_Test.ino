@@ -2,17 +2,22 @@
 
 void setup()
 {
+  //Join Serial bus
   Serial.begin(115200);
+  while (!Serial);  //Wait for user to open serial monitor
+
+  //Join Serial1 bus
   #if defined(ESP_PLATFORM)
   Serial1.begin(115200, SERIAL_8N1, 16, 17);
-  #else
+  #elif defined(ARDUINO_ARCH_SAMD)
   Serial1.begin(115200);
   #endif
+
+  while (!Serial1)
+    Serial.println("Serial one did not connect. Freezing");
+
+  //Join Serial2 bus
 //  Serial2.begin(115200);
-
-  while (!Serial); // Wait for user to run python script or open serial monitor
-
-  delay(100);
 
   Serial.println("This is Serial 0");
   Serial1.println("This is Serial 1");
@@ -21,6 +26,7 @@ void setup()
      
 void loop() // run over and over again
 {
+  
   while (Serial.available()) {
     char c = Serial.read();
     Serial1.write(c);

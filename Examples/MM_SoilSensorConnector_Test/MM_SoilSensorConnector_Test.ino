@@ -12,7 +12,7 @@ int soilPin = 34;
 int soilPower = 4;
 #elif defined(ARDUINO_ARCH_SAMD)
 int STAT_LED = 13;
-int soilPin = A2;
+int soilPin = A0;
 int soilPower = 2;
 #endif
 
@@ -20,6 +20,8 @@ int moist_val = 0;  //Variable for storing moisture value
 
 void setup() {
   Serial.begin(115200);
+  while(!Serial); //Wait for user to open serial monitor
+  
   Serial.println("MicroMod Weather Carrier Board Test - Soil Moisture Connector");
   Serial.println();
 

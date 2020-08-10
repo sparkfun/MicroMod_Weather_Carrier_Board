@@ -32,6 +32,13 @@ const int LEDC_CHANNEL_0 = 0;
 const int LEDC_CHANNEL_1 = 1;
 const int resolution = 8;
 const int PIN_VIN3 = 39;
+#elif defined(ARDUINO_ARCH_SAMD)
+#define ANALOG_RESOLUTION 12
+int STAT_LED = 13;
+const int SD_chipSelect = 36; //NOTE: not sure if this is right. Can't test SD card right now anyway!
+const int PIN_PWM0 = A2;
+const int PIN_PWM1 = A3;
+const int PIN_VIN3 = A4;
 #endif
 
 int maxADCValue = pow(2, ANALOG_RESOLUTION);
@@ -83,6 +90,7 @@ void testRemainingFunctions() {
 
 void setup() {
   Serial.begin(115200);
+  while (!Serial);  //Wait for the user to open serial monitor
   Serial.println("MicroMod Weather Carrier Board Left Over Function Test");
   Serial.println();
 
