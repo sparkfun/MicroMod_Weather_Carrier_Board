@@ -15,6 +15,8 @@ BME280 tempSensor;
 int STAT_LED = 19;
 #elif defined(ESP_PLATFORM)
 int STAT_LED = 5;
+#elif defined(ARDUINO_ARCH_SAMD)
+int STAT_LED = 13;
 #endif
 
 void setup() {

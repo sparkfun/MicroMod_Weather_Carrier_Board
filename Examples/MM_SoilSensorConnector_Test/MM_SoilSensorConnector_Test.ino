@@ -10,6 +10,10 @@ int soilPower = A16;  //Pin number that will power the soil moisture sensor
 int STAT_LED = 5;
 int soilPin = 34;
 int soilPower = 4;
+#elif defined(ARDUINO_ARCH_SAMD)
+int STAT_LED = 13;
+int soilPin = A2;
+int soilPower = 2;
 #endif
 
 int moist_val = 0;  //Variable for storing moisture value

@@ -45,7 +45,7 @@ void setup()
   Serial.begin(115200); 
   Serial.println("AS3935 Franklin Lightning Detector"); 
 
-  SPI.begin(); 
+  SPI.begin(14, 2, 15); 
 
   if( !lightning.beginSPI(spiCS, 2000000) ){ 
     Serial.println ("Lightning Detector did not start up, freezing!"); 
@@ -57,7 +57,7 @@ void setup()
   // The lightning detector defaults to an indoor setting at 
   // the cost of less sensitivity, if you plan on using this outdoors 
   // uncomment the following line:
-  lightning.setIndoorOutdoor(OUTDOOR); 
+//  lightning.setIndoorOutdoor(OUTDOOR); 
 }
 
 void loop()
@@ -75,7 +75,7 @@ void loop()
       Serial.println("Disturber."); 
       // Too many disturbers? Uncomment the code below, a higher number means better
       // disturber rejection.
-      //lightning.watchdogThreshold(disturber);  
+      lightning.watchdogThreshold(disturber);  
     }
     else if(intVal == LIGHTNING_INT){
       Serial.println("Lightning Strike Detected!"); 
