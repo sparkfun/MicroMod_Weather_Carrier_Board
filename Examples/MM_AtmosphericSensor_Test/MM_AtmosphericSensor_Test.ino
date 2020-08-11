@@ -1,8 +1,21 @@
 /*
- * MicroMod Weather Carrier Board BME280 Test
+ * MicroMod Weather Carrier Board BME280 Example
  * 
  * This sketch tests the BME280 IC. It communicates over
  * I2C and measures temperature, pressure, and humidity
+ * 
+ * Priyanka Makin @ SparkX Labs
+ * Original Creation Date: August 11, 2020
+ * 
+ * This code is Lemonadeware; if you see me (or any other SparkFun employee) at the
+ * local, and you've found our code helpful, please buy us a round!
+ * 
+ * Hardware connections:
+ * Insert MicroMod processor board of your choice into the M.2 connector of the SparkFun Weather carrier 
+ *  Screw into place
+ * Connect Weather carrier board to power using USB-C cable
+ * 
+ * Distributed as-is; no warranty is given.
  */
  
 #include <Wire.h>
@@ -23,7 +36,7 @@ void setup() {
   Serial.begin(115200);
   while (!Serial);  //Wait for user to open serial monitor
   
-  Serial.println("MicroMod Weather Carrier Board - BME280 Test");
+  Serial.println("MicroMod Weather Carrier Board - BME280 Example");
   Serial.println();
 
   Wire.begin(); //Join I2C bus

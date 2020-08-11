@@ -1,14 +1,21 @@
 /*
-  This example demonstrates how to detect lightning! It has a few basic
-  settings to help with rejecting noise or "disturbers" (false lightning events). 
-  It uses the onboard interrupt hardware pin, so in addition to attaching to
-  it data lines you'll need to connnect to the interrupt pin labled "INT". 
-
-  By: Elias Santistevan
-  SparkFun Electronics
-  Date: May, 2019
-  License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware license).
-
+ * MicroMod Weather Carrier Board Lightning Detector Example
+ * 
+ * This example demonstrates how to detect lightning. It uses the onboard interrupt pin.
+ * 
+ * Priyanka Makin @ SparkX Labs
+ * Based on code by Elias Santistevan
+ * Original Creation Date: August 11, 2020
+ * 
+ * This code is Lemonadeware; if you see me (or any other SparkFun employee) at the
+ * local, and you've found our code helpful, please buy us a round!
+ * 
+ * Hardware Connections:
+ * Insert MicroMod processor board of your choice into the M.2 connector of the SparkFun Weather carrier
+ *  Screw into place
+ * Connect Weather carrier board to power using USB-C cable
+ * 
+ * Distributed as-is; no warranty is given.
 */
 
 #include <SPI.h>
@@ -39,13 +46,18 @@ int disturber = 2; // Value between 1-10
 
 void setup()
 {
+  Serial.begin(115200); 
+  while (!Serial);  //Wait for user to open serial monitor
+  
+  Serial.println("MicroMod Weather Carrier Board - AS3935 Lightning Detector Example"); 
+  Serial.println();
+  
   // When lightning is detected the interrupt pin goes HIGH.
   pinMode(lightningInt, INPUT); 
 
-  Serial.begin(115200); 
-  Serial.println("AS3935 Franklin Lightning Detector"); 
-
+  #if defined(ESP_PLATFORM)
   SPI.begin(14, 2, 15); 
+  #endif
 
   if( !lightning.beginSPI(spiCS, 2000000) ){ 
     Serial.println ("Lightning Detector did not start up, freezing!"); 
@@ -75,7 +87,7 @@ void loop()
       Serial.println("Disturber."); 
       // Too many disturbers? Uncomment the code below, a higher number means better
       // disturber rejection.
-      lightning.watchdogThreshold(disturber);  
+//      lightning.watchdogThreshold(disturber);  
     }
     else if(intVal == LIGHTNING_INT){
       Serial.println("Lightning Strike Detected!"); 

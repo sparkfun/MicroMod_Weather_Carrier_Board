@@ -1,5 +1,22 @@
 /*
- * MicroMod Weather Carrier Board Weather Meter Test
+ * MicroMod Weather Carrier Board Weather Meter Example
+ * 
+ * This sketch tests the RJ11 connectors and changes in the 
+ * wind speed, wind direction, and rain meters.
+ * 
+ * Priyanka Makin @ SparkX Labs
+ * Original Creation Date: August 11, 2020
+ * 
+ * This code is Lemonadeware; of you see me (or any other SparkFun employee) at the
+ * local, and you've found our code helpful, please buy us a round!
+ * 
+ * Hardware Connections:
+ * Insert MicroMod processor board of your choice into the M.2 connector of the SparkFun Weather carrier
+ *  Screw into place
+ * Connect Weather carrier board to power using USB-C cable
+ * Connect both wind and rain meters to Weather carrier using the RJ11 connectors
+ * 
+ * Distributed as-is; no warranty is given.
  */
 
 #if defined(ARDUINO_ARCH_APOLLO3)

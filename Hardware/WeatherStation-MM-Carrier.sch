@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.4.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -28144,7 +28144,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND38" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="1.0NF/1000PF" device="-0603-50V-10%" value="1nF"/>
 <part name="R6" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
-<part name="R19" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
+<part name="R19" library="SparkFun-Resistors" deviceset="100KOHM" device="-0603-1/10W-1%" value="100k"/>
 <part name="SUPPLY29" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="L1" library="SparkFun-Coils" deviceset="MA5532-AE" device="" value="100uH"/>
 <part name="GND40" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -28204,7 +28204,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="55.88" y="193.04" size="1.778" layer="97" font="vector" rot="R90">300uA Leakage</text>
 <text x="35.56" y="200.66" size="1.778" layer="97" font="vector" rot="R90">0.65uA Leakage
 0.3V drop at 10mA</text>
-<text x="48.26" y="180.34" size="1.778" layer="97" font="vector">~20 minute charge time</text>
 <text x="48.26" y="182.88" size="1.778" layer="97" font="vector">1mAhr Capacity</text>
 <text x="71.12" y="210.82" size="1.778" layer="97" font="vector">This is the penny-in-the-fuse jumper.
 Close only if you know what you're doing.</text>
