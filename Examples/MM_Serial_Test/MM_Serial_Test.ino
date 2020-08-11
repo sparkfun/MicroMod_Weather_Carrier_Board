@@ -9,7 +9,7 @@ void setup()
   //Join Serial1 bus
   #if defined(ESP_PLATFORM)
   Serial1.begin(115200, SERIAL_8N1, 16, 17);
-  #elif defined(ARDUINO_ARCH_SAMD)
+  #else 
   Serial1.begin(115200);
   #endif
 
