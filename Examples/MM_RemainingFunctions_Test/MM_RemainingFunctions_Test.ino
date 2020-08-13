@@ -2,11 +2,11 @@
  * MicroMod Weather Carrier Board Remaining Function Test
  * 
  * This sketch tests the following:
- * Stat LED
- * uSD card
+ * xStat LED
+ * xuSD card
  * PWM0/1
- * Qwiic Connector
- * VIN/3
+ * xQwiic Connector
+ * xVIN/3
  */
 
 #include <Wire.h>
