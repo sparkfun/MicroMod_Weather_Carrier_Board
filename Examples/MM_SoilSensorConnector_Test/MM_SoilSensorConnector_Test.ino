@@ -21,8 +21,8 @@
 
 #if defined(ARDUINO_ARCH_APOLLO3)
 int STAT_LED = 19;
-int soilPin = A32;  //Pin number that measures analog moisture signal
-int soilPower = A16;  //Pin number that will power the soil moisture sensor
+int soilPin = 32;  //Pin number that measures analog moisture signal
+int soilPower = 16;  //Pin number that will power the soil moisture sensor
 #elif defined(ESP_PLATFORM)
 int STAT_LED = 5;
 int soilPin = 34;

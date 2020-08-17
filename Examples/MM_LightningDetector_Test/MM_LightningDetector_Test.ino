@@ -32,7 +32,7 @@ SparkFun_AS3935 lightning;
 
 #if defined(ARDUINO_ARCH_APOLLO3) 
 const int lightningInt = 27; // Interrupt pin for lightning detection
-int spiCS = A33; //SPI chip select pin
+int spiCS = 33; //SPI chip select pin
 #elif defined(ESP_PLATFORM)
 const int lightningInt = 17;
 int spiCS = 12;
