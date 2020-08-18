@@ -69,7 +69,7 @@ void setup()
   // The lightning detector defaults to an indoor setting at 
   // the cost of less sensitivity, if you plan on using this outdoors 
   // uncomment the following line:
-//  lightning.setIndoorOutdoor(OUTDOOR); 
+  lightning.setIndoorOutdoor(OUTDOOR); 
 }
 
 void loop()
