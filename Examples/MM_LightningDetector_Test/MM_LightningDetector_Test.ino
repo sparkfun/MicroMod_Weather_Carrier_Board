@@ -30,13 +30,13 @@
 
 SparkFun_AS3935 lightning;
 
-#if defined(ARDUINO_ARCH_APOLLO3) 
-const int lightningInt = 27; // Interrupt pin for lightning detection
-int spiCS = 33; //SPI chip select pin
-#elif defined(ESP_PLATFORM)
-const int lightningInt = 17;
-int spiCS = 12;
+#if defined(ESP_PLATFORM)
+const int G3 = 17;
+int G1 = 12;
 #endif
+
+const int lightningInt = G3;
+int spiCS = G1;
 
 // This variable holds the number representing the lightning or non-lightning
 // event issued by the lightning detector. 
@@ -59,7 +59,7 @@ void setup()
   SPI.begin(14, 2, 15); 
   #endif
 
-  if( !lightning.beginSPI(spiCS, 2000000) ){ 
+  if(lightning.beginSPI(spiCS, 2000000) == false){ 
     Serial.println ("Lightning Detector did not start up, freezing!"); 
     while(1); 
   }

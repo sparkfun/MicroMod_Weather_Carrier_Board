@@ -24,12 +24,8 @@
 BME280 tempSensor;
 
 //LED pin
-#if defined(ARDUINO_ARCH_APOLLO3)
-int STAT_LED = 19;
-#elif defined(ESP_PLATFORM)
-int STAT_LED = 5;
-#elif defined(ARDUINO_ARCH_SAMD)
-int STAT_LED = 13;
+#if defined(ESP_PLATFORM)
+int LED_BUILTIN = 5;
 #endif
 
 void setup() {
@@ -46,11 +42,11 @@ void setup() {
     while(1); //Freeze
   }
 
-  pinMode(STAT_LED, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(STAT_LED, HIGH);
+  digitalWrite(LED_BUILTIN, HIGH);
   Serial.print("Temperature: ");
   Serial.println(tempSensor.readTempF(), 2);
   Serial.print("Humidity: ");
@@ -61,6 +57,6 @@ void loop() {
   Serial.println(tempSensor.readFloatAltitudeFeet(), 1);
   Serial.println();
 
-  digitalWrite(STAT_LED, LOW);
+  digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
 }

@@ -7,7 +7,7 @@
  * Priyanka Makin @ SparkX Labs
  * Original Creation Date: August 11, 2020
  * 
- * This code is Lemonadeware; of you see me (or any other SparkFun employee) at the
+ * This code is Lemonadeware; if you see me (or any other SparkFun employee) at the
  * local, and you've found our code helpful, please buy us a round!
  * 
  * Hardware Connections:
@@ -19,31 +19,30 @@
  * Distributed as-is; no warranty is given.
  */
 
-#if defined(ARDUINO_ARCH_APOLLO3)
-int WSPEED = 0; //Digital I/O pin for wind speed
-int WDIR = 35; //Analog pin for wind direction
-int RAIN = 1; //Digital I/O pin for rain fall
-#elif defined(ESP_PLATFORM)
-int WSPEED = 23;
-int WDIR = 35;
-int RAIN = 27;
+#if defined(ESP_PLATFORM)
+int D0 = 23;
+int A1 = 35;
+int D1 = 27;
 #elif defined(ARDUINO_ARCH_SAMD)
-int WSPEED = 0;
-int WDIR = A1;
-int RAIN = 1;
+int D0 = 0;
+int D1 = 1;
 #endif
 
-volatile bool rain_flag = false;
-volatile bool wind_flag = false;
+int WSPEED = D0;  //Digital I/O pin for wind speed
+int WDIR = A1;  //Analog pin for wind direction
+int RAIN = D1;  //Digital I/O pin for rain fall
+
+volatile bool rainFlag = false;
+volatile bool windFlag = false;
 
 //Function is called every time the rain bucket tips
 void rainIRQ() {
-  rain_flag = true;
+  rainFlag = true;
 }
 
 //Function is called every time the rain bucket tips
 void wspeedIRQ() {
-  wind_flag = true;
+  windFlag = true;
 }
 
 void setup() {
@@ -65,22 +64,22 @@ void setup() {
 
 void loop() {
   Serial.print("Wind direction: ");
-  Serial.print(get_wind_direction());
+  Serial.print(getWindDirection());
   Serial.println(" degrees");
 
   //Check interrupt flags
-  if (rain_flag == true) {
-    Serial.println("RAIN!");
-    rain_flag = false;
+  if (rainFlag == true) {
+    Serial.println("Rain click!");
+    rainFlag = false;
   }
-  if (wind_flag == true) {
+  if (windFlag == true) {
     Serial.println("Wind click!");
-    wind_flag = false;
+    windFlag = false;
   }
   delay(1000);
 }
 
-int get_wind_direction()
+int getWindDirection()
 {
   unsigned int adc;
   adc = analogRead(WDIR); //get the current readings from the sensor

@@ -19,21 +19,16 @@
  *  Distributed as-is; no warranty is given.
  */
 
-#if defined(ARDUINO_ARCH_APOLLO3)
-int STAT_LED = 19;
-int soilPin = 32;  //Pin number that measures analog moisture signal
-int soilPower = 16;  //Pin number that will power the soil moisture sensor
-#elif defined(ESP_PLATFORM)
-int STAT_LED = 5;
-int soilPin = 34;
-int soilPower = 4;
+#if defined(ESP_PLATFORM)
+int LED_BUILTIN = 5;
+//int A0 = 34;
+int G0 = 4;
 #elif defined(ARDUINO_ARCH_SAMD)
-int STAT_LED = 13;
-int soilPin = A0;
-int soilPower = 2;
+int G0 = 2;
 #endif
 
-int moist_val = 0;  //Variable for storing moisture value
+int soilPin = A0;  //Pin number that measures analog moisture signal
+int soilPower = G0;  //Pin number that will power the soil moisture sensor
 
 void setup() {
   Serial.begin(115200);
@@ -48,20 +43,23 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(STAT_LED, HIGH);
+  digitalWrite(LED_BUILTIN, HIGH);
   Serial.print("Soil Moisture = ");
   Serial.println(readSoil());
   Serial.println();
 
-  digitalWrite(STAT_LED, LOW);
+  digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
 }
 
 int readSoil() {
+  int moistVal = 0;  //Variable for storing moisture value
   //Power the sensor
   digitalWrite(soilPower, HIGH);
   delay(10);
-  moist_val = analogRead(soilPin);  //Read the SIG value from sensor
+  moistVal = analogRead(soilPin);   //Read the SIG value from sensor. Moisture value depends on PB's operating voltage and ADC resolution
+                                    //Check out the SparkFun Soil Moisture Sensor hookup guide for tips on calibrating your sensor
+                                    //https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide?_ga=2.27184827.782829043.1597935536-2045279763.156684911
   digitalWrite(soilPower, LOW); //Turn the sensor off
-  return moist_val; //Return current moisture value
+  return moistVal; //Return current moisture value
 }

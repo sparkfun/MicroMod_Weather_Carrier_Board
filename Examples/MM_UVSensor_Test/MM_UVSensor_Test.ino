@@ -23,12 +23,8 @@
 VEML6075 uv;
 
 //LED pin
-#if defined(ARDUINO_ARCH_APOLLO3)
-int STAT_LED = 19;
-#elif defined(ESP_PLATFORM)
-int STAT_LED = 5;
-#elif defined(ARDUINO_ARCH_SAMD)
-int STAT_LED = 13;
+#if defined(ESP_PLATFORM)
+int LED_BUILTIN = 5;
 #endif
 
 void setup() {
@@ -44,17 +40,17 @@ void setup() {
     while(1);
   }
 
-  pinMode(STAT_LED, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
   Serial.println("UVA, UVB, UV Index");
   Serial.println();
 
 }
 
 void loop() {
-  digitalWrite(STAT_LED, HIGH);
+  digitalWrite(LED_BUILTIN, HIGH);
   Serial.println(String(uv.uva()) + ", " + String(uv.uvb()) + ", "+ String(uv.index()));
   Serial.println();
 
-  digitalWrite(STAT_LED, LOW);
+  digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
 }
