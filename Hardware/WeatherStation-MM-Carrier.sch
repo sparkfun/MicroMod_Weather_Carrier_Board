@@ -21657,6 +21657,128 @@ Used as a test point connection for pogo pins or other debugging tools.
 <text x="-1.27" y="-1.778" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 </package>
+<package name="1X05_SMD_VERTICAL_COMBO">
+<description>&lt;h3&gt;SMD - 4 Pin Vertical Connector&lt;/h3&gt;
+&lt;p&gt;Specifications:
+&lt;ul&gt;&lt;li&gt;Pin count:5&lt;/li&gt;
+&lt;li&gt;SMD Pad count:10&lt;/li&gt;
+&lt;li&gt;Pin pitch:0.1"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;CONN_05&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<wire x1="-1.37" y1="-1.25" x2="-1.37" y2="1.25" width="0.1778" layer="21"/>
+<wire x1="-0.73" y1="-1.25" x2="-1.37" y2="-1.25" width="0.1778" layer="21"/>
+<wire x1="9.4726" y1="-1.25" x2="8.32" y2="-1.25" width="0.1778" layer="21"/>
+<wire x1="8.32" y1="1.25" x2="9.4726" y2="1.25" width="0.1778" layer="21"/>
+<wire x1="-1.37" y1="1.25" x2="-0.73" y2="1.25" width="0.1778" layer="21"/>
+<wire x1="5.7928" y1="-1.29" x2="6.9072" y2="-1.29" width="0.1778" layer="21"/>
+<wire x1="5.7928" y1="1.25" x2="6.9072" y2="1.25" width="0.1778" layer="21"/>
+<wire x1="3.2782" y1="-1.29" x2="4.3672" y2="-1.29" width="0.1778" layer="21"/>
+<wire x1="3.329" y1="1.25" x2="4.291" y2="1.25" width="0.1778" layer="21"/>
+<wire x1="0.789" y1="-1.29" x2="1.751" y2="-1.29" width="0.1778" layer="21"/>
+<wire x1="0.789" y1="1.25" x2="1.751" y2="1.25" width="0.1778" layer="21"/>
+<wire x1="11.53" y1="1.25" x2="11.53" y2="-1.25" width="0.1778" layer="21"/>
+<wire x1="11.53" y1="-1.25" x2="10.86" y2="-1.25" width="0.1778" layer="21"/>
+<wire x1="10.86" y1="1.25" x2="11.53" y2="1.25" width="0.1778" layer="21"/>
+<smd name="1" x="0" y="1.65" dx="2" dy="1" layer="1" rot="R90" stop="no"/>
+<smd name="3" x="5.08" y="1.65" dx="2" dy="1" layer="1" rot="R90" stop="no" cream="no"/>
+<smd name="4" x="7.62" y="1.652" dx="2" dy="1" layer="1" rot="R90" stop="no" cream="no"/>
+<smd name="5" x="10.16" y="1.65" dx="2" dy="1" layer="1" rot="R90" stop="no" cream="no"/>
+<text x="-0.381" y="2.858" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
+<text x="-0.508" y="-3.616" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
+<polygon width="0.01" layer="1">
+<vertex x="2.04" y="2.65"/>
+<vertex x="3.04" y="2.65"/>
+<vertex x="3.04" y="0.65"/>
+<vertex x="2.74" y="0.65"/>
+<vertex x="2.74" y="-0.65"/>
+<vertex x="3.04" y="-0.65"/>
+<vertex x="3.04" y="-2.65"/>
+<vertex x="2.04" y="-2.65"/>
+<vertex x="2.04" y="-0.65"/>
+<vertex x="2.34" y="-0.65"/>
+<vertex x="2.34" y="0.65"/>
+<vertex x="2.04" y="0.65"/>
+</polygon>
+<rectangle x1="1.92" y1="-2.76" x2="3.12" y2="-0.56" layer="29" rot="R180"/>
+<rectangle x1="1.92" y1="-2.76" x2="3.12" y2="-0.56" layer="31" rot="R180"/>
+<rectangle x1="1.94" y1="0.54" x2="3.14" y2="2.74" layer="29" rot="R180"/>
+<rectangle x1="1.94" y1="0.54" x2="3.14" y2="2.74" layer="31" rot="R180"/>
+<polygon width="0.01" layer="1">
+<vertex x="-0.5" y="2.65"/>
+<vertex x="0.5" y="2.65"/>
+<vertex x="0.5" y="0.65"/>
+<vertex x="0.2" y="0.65"/>
+<vertex x="0.2" y="-0.65"/>
+<vertex x="0.5" y="-0.65"/>
+<vertex x="0.5" y="-2.65"/>
+<vertex x="-0.5" y="-2.65"/>
+<vertex x="-0.5" y="-0.65"/>
+<vertex x="-0.2" y="-0.65"/>
+<vertex x="-0.2" y="0.65"/>
+<vertex x="-0.5" y="0.65"/>
+</polygon>
+<rectangle x1="-0.62" y1="-2.76" x2="0.58" y2="-0.56" layer="29" rot="R180"/>
+<rectangle x1="-0.62" y1="-2.76" x2="0.58" y2="-0.56" layer="31" rot="R180"/>
+<rectangle x1="-0.6" y1="0.54" x2="0.6" y2="2.74" layer="29" rot="R180"/>
+<rectangle x1="-0.6" y1="0.54" x2="0.6" y2="2.74" layer="31" rot="R180"/>
+<polygon width="0.01" layer="1">
+<vertex x="4.59" y="2.65"/>
+<vertex x="5.59" y="2.65"/>
+<vertex x="5.59" y="0.65"/>
+<vertex x="5.29" y="0.65"/>
+<vertex x="5.29" y="-0.65"/>
+<vertex x="5.59" y="-0.65"/>
+<vertex x="5.59" y="-2.65"/>
+<vertex x="4.59" y="-2.65"/>
+<vertex x="4.59" y="-0.65"/>
+<vertex x="4.89" y="-0.65"/>
+<vertex x="4.89" y="0.65"/>
+<vertex x="4.59" y="0.65"/>
+</polygon>
+<rectangle x1="4.47" y1="-2.76" x2="5.67" y2="-0.56" layer="29" rot="R180"/>
+<rectangle x1="4.47" y1="-2.76" x2="5.67" y2="-0.56" layer="31" rot="R180"/>
+<rectangle x1="4.49" y1="0.54" x2="5.69" y2="2.74" layer="29" rot="R180"/>
+<rectangle x1="4.49" y1="0.54" x2="5.69" y2="2.74" layer="31" rot="R180"/>
+<polygon width="0.01" layer="1">
+<vertex x="7.12" y="2.65"/>
+<vertex x="8.12" y="2.65"/>
+<vertex x="8.12" y="0.65"/>
+<vertex x="7.82" y="0.65"/>
+<vertex x="7.82" y="-0.65"/>
+<vertex x="8.12" y="-0.65"/>
+<vertex x="8.12" y="-2.65"/>
+<vertex x="7.12" y="-2.65"/>
+<vertex x="7.12" y="-0.65"/>
+<vertex x="7.42" y="-0.65"/>
+<vertex x="7.42" y="0.65"/>
+<vertex x="7.12" y="0.65"/>
+</polygon>
+<rectangle x1="7" y1="-2.76" x2="8.2" y2="-0.56" layer="29" rot="R180"/>
+<rectangle x1="7" y1="-2.76" x2="8.2" y2="-0.56" layer="31" rot="R180"/>
+<rectangle x1="7.02" y1="0.54" x2="8.22" y2="2.74" layer="29" rot="R180"/>
+<rectangle x1="7.02" y1="0.54" x2="8.22" y2="2.74" layer="31" rot="R180"/>
+<polygon width="0.01" layer="1">
+<vertex x="9.66" y="2.65"/>
+<vertex x="10.66" y="2.65"/>
+<vertex x="10.66" y="0.65"/>
+<vertex x="10.36" y="0.65"/>
+<vertex x="10.36" y="-0.65"/>
+<vertex x="10.66" y="-0.65"/>
+<vertex x="10.66" y="-2.65"/>
+<vertex x="9.66" y="-2.65"/>
+<vertex x="9.66" y="-0.65"/>
+<vertex x="9.96" y="-0.65"/>
+<vertex x="9.96" y="0.65"/>
+<vertex x="9.66" y="0.65"/>
+</polygon>
+<rectangle x1="9.54" y1="-2.76" x2="10.74" y2="-0.56" layer="29" rot="R180"/>
+<rectangle x1="9.54" y1="-2.76" x2="10.74" y2="-0.56" layer="31" rot="R180"/>
+<rectangle x1="9.56" y1="0.54" x2="10.76" y2="2.74" layer="29" rot="R180"/>
+<rectangle x1="9.56" y1="0.54" x2="10.76" y2="2.74" layer="31" rot="R180"/>
+<smd name="2" x="2.54" y="1.65" dx="2" dy="1" layer="1" rot="R90" stop="no"/>
+</package>
 </packages>
 <symbols>
 <symbol name="USB-C-MINIMUM">
@@ -22196,6 +22318,20 @@ PTH and SMD connector options available.&lt;/p&gt;
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="Combine 8288+8399" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="VERT_FEMALE_HEADER" package="1X05_SMD_VERTICAL_COMBO">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CONN-15262" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -24864,6 +25000,29 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <circle x="-5.08" y="0" radius="0.9906" width="0" layer="30"/>
 <circle x="5.08" y="0" radius="0.9906" width="0" layer="30"/>
 </package>
+<package name="DO-214BA">
+<description>&lt;h3&gt;Physical Specifications&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Body Size: 4.57mm x 3.94mm
+&lt;li&gt;Pitch: 4.07mm
+&lt;li&gt; Pad Size: 1.52mm x 2.21mm
+&lt;li&gt; Total Overall Size: 5.59mm
+&lt;/ul&gt;</description>
+<smd name="A" x="-2.032" y="0" dx="1.52" dy="2.21" layer="1"/>
+<smd name="C" x="2.038" y="0" dx="1.52" dy="2.21" layer="1"/>
+<wire x1="-2.332" y1="-2" x2="2.238" y2="-2" width="0.1" layer="51"/>
+<wire x1="2.238" y1="-2" x2="2.238" y2="2" width="0.1" layer="51"/>
+<wire x1="2.238" y1="2" x2="-2.332" y2="2" width="0.1" layer="51"/>
+<wire x1="-2.332" y1="2" x2="-2.332" y2="-2" width="0.1" layer="51"/>
+<rectangle x1="3.018" y1="-1.15" x2="3.418" y2="1.2" layer="21"/>
+<rectangle x1="0.968" y1="-1.55" x2="1.768" y2="1.5" layer="51"/>
+<wire x1="-2.982" y1="2.1" x2="-2.982" y2="-2.15" width="0.1" layer="39"/>
+<wire x1="-2.982" y1="-2.15" x2="2.968" y2="-2.15" width="0.1" layer="39"/>
+<wire x1="2.968" y1="-2.15" x2="2.968" y2="2.1" width="0.1" layer="39"/>
+<wire x1="2.968" y1="2.1" x2="-2.982" y2="2.1" width="0.1" layer="39"/>
+<text x="-2.286" y="2.159" size="0.6096" layer="25" ratio="20">&gt;NAME</text>
+<text x="-2.413" y="-2.794" size="0.6096" layer="27" ratio="20">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="DIODE-SCHOTTKY">
@@ -25024,6 +25183,18 @@ Allows current flow in one direction, but allows reverse flow when above breakdo
 <technology name="">
 <attribute name="PROD_ID" value="DIO-14072"/>
 <attribute name="VALUE" value="3A/10V/280mV"/>
+</technology>
+</technologies>
+</device>
+<device name="-LSM115JE3" package="DO-214BA">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="DIO-15271" constant="no"/>
+<attribute name="VALUE" value="1A/15V/220mV" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -27456,76 +27627,76 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-11" y1="3.6" x2="-10.4" y2="3" width="0.05" layer="51" curve="86.784874"/>
 <wire x1="10" y1="20" x2="11" y2="19" width="0.05" layer="51" curve="-87.205638"/>
 <wire x1="-11" y1="19" x2="-10" y2="20" width="0.05" layer="51" curve="-87.205638"/>
-<rectangle x1="-9.1" y1="1.55" x2="-8.9" y2="3" layer="31"/>
-<rectangle x1="-9.35" y1="-6" x2="-9.15" y2="-4.55" layer="31"/>
-<rectangle x1="-8.6" y1="1.55" x2="-8.4" y2="3" layer="31"/>
-<rectangle x1="-8.85" y1="-6" x2="-8.65" y2="-4.55" layer="31"/>
-<rectangle x1="-8.1" y1="1.55" x2="-7.9" y2="3" layer="31"/>
-<rectangle x1="-8.35" y1="-6" x2="-8.15" y2="-4.55" layer="31"/>
-<rectangle x1="-7.6" y1="1.55" x2="-7.4" y2="3" layer="31"/>
-<rectangle x1="-7.85" y1="-6" x2="-7.65" y2="-4.55" layer="31"/>
-<rectangle x1="-7.1" y1="1.55" x2="-6.9" y2="3" layer="31"/>
-<rectangle x1="-7.35" y1="-6" x2="-7.15" y2="-4.55" layer="31"/>
-<rectangle x1="-6.6" y1="1.55" x2="-6.4" y2="3" layer="31"/>
-<rectangle x1="-6.85" y1="-6" x2="-6.65" y2="-4.55" layer="31"/>
-<rectangle x1="-6.1" y1="1.55" x2="-5.9" y2="3" layer="31"/>
-<rectangle x1="-6.35" y1="-6" x2="-6.15" y2="-4.55" layer="31"/>
-<rectangle x1="-5.6" y1="1.55" x2="-5.4" y2="3" layer="31"/>
-<rectangle x1="-5.85" y1="-6" x2="-5.65" y2="-4.55" layer="31"/>
-<rectangle x1="-5.1" y1="1.55" x2="-4.9" y2="3" layer="31"/>
-<rectangle x1="-5.35" y1="-6" x2="-5.15" y2="-4.55" layer="31"/>
-<rectangle x1="-4.6" y1="1.55" x2="-4.4" y2="3" layer="31"/>
-<rectangle x1="-4.85" y1="-6" x2="-4.65" y2="-4.55" layer="31"/>
-<rectangle x1="-4.1" y1="1.55" x2="-3.9" y2="3" layer="31"/>
-<rectangle x1="-4.35" y1="-6" x2="-4.15" y2="-4.55" layer="31"/>
-<rectangle x1="-3.6" y1="1.55" x2="-3.4" y2="3" layer="31"/>
-<rectangle x1="-3.85" y1="-6" x2="-3.65" y2="-4.55" layer="31"/>
-<rectangle x1="-3.1" y1="1.55" x2="-2.9" y2="3" layer="31"/>
-<rectangle x1="-3.35" y1="-6" x2="-3.15" y2="-4.55" layer="31"/>
-<rectangle x1="-2.6" y1="1.55" x2="-2.4" y2="3" layer="31"/>
-<rectangle x1="-2.85" y1="-6" x2="-2.65" y2="-4.55" layer="31"/>
-<rectangle x1="-2.1" y1="1.55" x2="-1.9" y2="3" layer="31"/>
-<rectangle x1="-2.35" y1="-6" x2="-2.15" y2="-4.55" layer="31"/>
-<rectangle x1="-1.6" y1="1.55" x2="-1.4" y2="3" layer="31"/>
-<rectangle x1="-1.85" y1="-6" x2="-1.65" y2="-4.55" layer="31"/>
-<rectangle x1="-1.1" y1="1.55" x2="-0.9" y2="3" layer="31"/>
-<rectangle x1="-1.35" y1="-6" x2="-1.15" y2="-4.55" layer="31"/>
-<rectangle x1="-0.6" y1="1.55" x2="-0.4" y2="3" layer="31"/>
-<rectangle x1="-0.85" y1="-6" x2="-0.65" y2="-4.55" layer="31"/>
-<rectangle x1="-0.1" y1="1.55" x2="0.1" y2="3" layer="31"/>
-<rectangle x1="-0.35" y1="-6" x2="-0.15" y2="-4.55" layer="31"/>
-<rectangle x1="0.4" y1="1.55" x2="0.6" y2="3" layer="31"/>
-<rectangle x1="0.15" y1="-6" x2="0.35" y2="-4.55" layer="31"/>
-<rectangle x1="0.9" y1="1.55" x2="1.1" y2="3" layer="31"/>
-<rectangle x1="0.65" y1="-6" x2="0.85" y2="-4.55" layer="31"/>
-<rectangle x1="1.4" y1="1.55" x2="1.6" y2="3" layer="31"/>
-<rectangle x1="1.15" y1="-6" x2="1.35" y2="-4.55" layer="31"/>
-<rectangle x1="3.9" y1="1.55" x2="4.1" y2="3" layer="31"/>
-<rectangle x1="3.65" y1="-6" x2="3.85" y2="-4.55" layer="31"/>
-<rectangle x1="4.4" y1="1.55" x2="4.6" y2="3" layer="31"/>
-<rectangle x1="4.15" y1="-6" x2="4.35" y2="-4.55" layer="31"/>
-<rectangle x1="4.9" y1="1.55" x2="5.1" y2="3" layer="31"/>
-<rectangle x1="4.65" y1="-6" x2="4.85" y2="-4.55" layer="31"/>
-<rectangle x1="5.4" y1="1.55" x2="5.6" y2="3" layer="31"/>
-<rectangle x1="5.15" y1="-6" x2="5.35" y2="-4.55" layer="31"/>
-<rectangle x1="5.9" y1="1.55" x2="6.1" y2="3" layer="31"/>
-<rectangle x1="5.65" y1="-6" x2="5.85" y2="-4.55" layer="31"/>
-<rectangle x1="6.4" y1="1.55" x2="6.6" y2="3" layer="31"/>
-<rectangle x1="6.15" y1="-6" x2="6.35" y2="-4.55" layer="31"/>
-<rectangle x1="6.9" y1="1.55" x2="7.1" y2="3" layer="31"/>
-<rectangle x1="6.65" y1="-6" x2="6.85" y2="-4.55" layer="31"/>
-<rectangle x1="7.4" y1="1.55" x2="7.6" y2="3" layer="31"/>
-<rectangle x1="7.15" y1="-6" x2="7.35" y2="-4.55" layer="31"/>
-<rectangle x1="7.9" y1="1.55" x2="8.1" y2="3" layer="31"/>
-<rectangle x1="7.65" y1="-6" x2="7.85" y2="-4.55" layer="31"/>
-<rectangle x1="8.4" y1="1.55" x2="8.6" y2="3" layer="31"/>
-<rectangle x1="8.15" y1="-6" x2="8.35" y2="-4.55" layer="31"/>
-<rectangle x1="8.9" y1="1.55" x2="9.1" y2="3" layer="31"/>
-<rectangle x1="8.65" y1="-6" x2="8.85" y2="-4.55" layer="31"/>
-<rectangle x1="9.15" y1="-6" x2="9.35" y2="-4.55" layer="31" rot="R180"/>
+<rectangle x1="-9.15" y1="1.4" x2="-8.85" y2="3.15" layer="31"/>
 <circle x="4" y="20" radius="3" width="0.05" layer="51"/>
 <text x="0" y="0.635" size="0.762" layer="25" align="center">&gt;Name</text>
 <text x="0" y="-0.635" size="0.762" layer="27" align="center">&gt;Value</text>
+<rectangle x1="-8.15" y1="1.4" x2="-7.85" y2="3.15" layer="31"/>
+<rectangle x1="-7.65" y1="1.4" x2="-7.35" y2="3.15" layer="31"/>
+<rectangle x1="-8.65" y1="1.4" x2="-8.35" y2="3.15" layer="31"/>
+<rectangle x1="-7.15" y1="1.4" x2="-6.85" y2="3.15" layer="31"/>
+<rectangle x1="-6.15" y1="1.4" x2="-5.85" y2="3.15" layer="31"/>
+<rectangle x1="-5.65" y1="1.4" x2="-5.35" y2="3.15" layer="31"/>
+<rectangle x1="-6.65" y1="1.4" x2="-6.35" y2="3.15" layer="31"/>
+<rectangle x1="-5.15" y1="1.4" x2="-4.85" y2="3.15" layer="31"/>
+<rectangle x1="-4.15" y1="1.4" x2="-3.85" y2="3.15" layer="31"/>
+<rectangle x1="-3.65" y1="1.4" x2="-3.35" y2="3.15" layer="31"/>
+<rectangle x1="-4.65" y1="1.4" x2="-4.35" y2="3.15" layer="31"/>
+<rectangle x1="-3.15" y1="1.4" x2="-2.85" y2="3.15" layer="31"/>
+<rectangle x1="-2.15" y1="1.4" x2="-1.85" y2="3.15" layer="31"/>
+<rectangle x1="-1.65" y1="1.4" x2="-1.35" y2="3.15" layer="31"/>
+<rectangle x1="-2.65" y1="1.4" x2="-2.35" y2="3.15" layer="31"/>
+<rectangle x1="-1.15" y1="1.4" x2="-0.85" y2="3.15" layer="31"/>
+<rectangle x1="-0.15" y1="1.4" x2="0.15" y2="3.15" layer="31"/>
+<rectangle x1="0.35" y1="1.4" x2="0.65" y2="3.15" layer="31"/>
+<rectangle x1="-0.65" y1="1.4" x2="-0.35" y2="3.15" layer="31"/>
+<rectangle x1="0.85" y1="1.4" x2="1.15" y2="3.15" layer="31"/>
+<rectangle x1="1.35" y1="1.4" x2="1.65" y2="3.15" layer="31"/>
+<rectangle x1="3.85" y1="1.4" x2="4.15" y2="3.15" layer="31"/>
+<rectangle x1="4.35" y1="1.4" x2="4.65" y2="3.15" layer="31"/>
+<rectangle x1="4.85" y1="1.4" x2="5.15" y2="3.15" layer="31"/>
+<rectangle x1="5.85" y1="1.4" x2="6.15" y2="3.15" layer="31"/>
+<rectangle x1="6.35" y1="1.4" x2="6.65" y2="3.15" layer="31"/>
+<rectangle x1="5.35" y1="1.4" x2="5.65" y2="3.15" layer="31"/>
+<rectangle x1="6.85" y1="1.4" x2="7.15" y2="3.15" layer="31"/>
+<rectangle x1="7.85" y1="1.4" x2="8.15" y2="3.15" layer="31"/>
+<rectangle x1="8.35" y1="1.4" x2="8.65" y2="3.15" layer="31"/>
+<rectangle x1="7.35" y1="1.4" x2="7.65" y2="3.15" layer="31"/>
+<rectangle x1="8.85" y1="1.4" x2="9.15" y2="3.15" layer="31"/>
+<rectangle x1="-9.4" y1="-6.15" x2="-9.1" y2="-4.4" layer="31"/>
+<rectangle x1="-8.4" y1="-6.15" x2="-8.1" y2="-4.4" layer="31"/>
+<rectangle x1="-7.9" y1="-6.15" x2="-7.6" y2="-4.4" layer="31"/>
+<rectangle x1="-8.9" y1="-6.15" x2="-8.6" y2="-4.4" layer="31"/>
+<rectangle x1="-7.4" y1="-6.15" x2="-7.1" y2="-4.4" layer="31"/>
+<rectangle x1="-6.4" y1="-6.15" x2="-6.1" y2="-4.4" layer="31"/>
+<rectangle x1="-5.9" y1="-6.15" x2="-5.6" y2="-4.4" layer="31"/>
+<rectangle x1="-6.9" y1="-6.15" x2="-6.6" y2="-4.4" layer="31"/>
+<rectangle x1="-5.4" y1="-6.15" x2="-5.1" y2="-4.4" layer="31"/>
+<rectangle x1="-4.4" y1="-6.15" x2="-4.1" y2="-4.4" layer="31"/>
+<rectangle x1="-3.9" y1="-6.15" x2="-3.6" y2="-4.4" layer="31"/>
+<rectangle x1="-4.9" y1="-6.15" x2="-4.6" y2="-4.4" layer="31"/>
+<rectangle x1="-3.4" y1="-6.15" x2="-3.1" y2="-4.4" layer="31"/>
+<rectangle x1="-2.4" y1="-6.15" x2="-2.1" y2="-4.4" layer="31"/>
+<rectangle x1="-1.9" y1="-6.15" x2="-1.6" y2="-4.4" layer="31"/>
+<rectangle x1="-2.9" y1="-6.15" x2="-2.6" y2="-4.4" layer="31"/>
+<rectangle x1="-1.4" y1="-6.15" x2="-1.1" y2="-4.4" layer="31"/>
+<rectangle x1="-0.4" y1="-6.15" x2="-0.1" y2="-4.4" layer="31"/>
+<rectangle x1="0.1" y1="-6.15" x2="0.4" y2="-4.4" layer="31"/>
+<rectangle x1="-0.9" y1="-6.15" x2="-0.6" y2="-4.4" layer="31"/>
+<rectangle x1="0.6" y1="-6.15" x2="0.9" y2="-4.4" layer="31"/>
+<rectangle x1="1.1" y1="-6.15" x2="1.4" y2="-4.4" layer="31"/>
+<rectangle x1="3.6" y1="-6.15" x2="3.9" y2="-4.4" layer="31"/>
+<rectangle x1="4.1" y1="-6.15" x2="4.4" y2="-4.4" layer="31"/>
+<rectangle x1="4.6" y1="-6.15" x2="4.9" y2="-4.4" layer="31"/>
+<rectangle x1="5.6" y1="-6.15" x2="5.9" y2="-4.4" layer="31"/>
+<rectangle x1="6.1" y1="-6.15" x2="6.4" y2="-4.4" layer="31"/>
+<rectangle x1="5.1" y1="-6.15" x2="5.4" y2="-4.4" layer="31"/>
+<rectangle x1="6.6" y1="-6.15" x2="6.9" y2="-4.4" layer="31"/>
+<rectangle x1="7.6" y1="-6.15" x2="7.9" y2="-4.4" layer="31"/>
+<rectangle x1="8.1" y1="-6.15" x2="8.4" y2="-4.4" layer="31"/>
+<rectangle x1="7.1" y1="-6.15" x2="7.4" y2="-4.4" layer="31"/>
+<rectangle x1="8.6" y1="-6.15" x2="8.9" y2="-4.4" layer="31"/>
+<rectangle x1="9.1" y1="-6.15" x2="9.4" y2="-4.4" layer="31"/>
 </package>
 <package name="M.2-CARD-E-22">
 <wire x1="9.925" y1="0" x2="3.225" y2="0" width="0.0508" layer="47"/>
@@ -27711,9 +27882,9 @@ Out</text>
 <wire x1="20.32" y1="-45.72" x2="-20.32" y2="-45.72" width="0.254" layer="94"/>
 <wire x1="-20.32" y1="-45.72" x2="-20.32" y2="53.34" width="0.254" layer="94"/>
 <pin name="SPI_SCK/SDIO_CLK" x="22.86" y="50.8" length="short" rot="R180"/>
-<pin name="SPI_MOSI/SDIO_CMD" x="22.86" y="48.26" length="short" rot="R180"/>
+<pin name="SPI_SDO/SDIO_CMD" x="22.86" y="48.26" length="short" rot="R180"/>
 <pin name="SDIO_DATA1" x="22.86" y="43.18" length="short" rot="R180"/>
-<pin name="SPI_MISO/SDIO_DATA0" x="22.86" y="45.72" length="short" rot="R180"/>
+<pin name="SPI_SDI/SDIO_DATA0" x="22.86" y="45.72" length="short" rot="R180"/>
 <pin name="SDIO_DATA2" x="22.86" y="40.64" length="short" rot="R180"/>
 <pin name="SPI_!CS!/SDIO_DATA3" x="22.86" y="38.1" length="short" rot="R180"/>
 <pin name="AUD_MCLK" x="-22.86" y="0" length="short"/>
@@ -27729,8 +27900,8 @@ Out</text>
 <pin name="PWM1" x="22.86" y="12.7" length="short" rot="R180"/>
 <pin name="PWM0" x="22.86" y="15.24" length="short" rot="R180"/>
 <pin name="SPI_SCK1" x="22.86" y="33.02" length="short" rot="R180"/>
-<pin name="SPI_MOSI1" x="22.86" y="30.48" length="short" rot="R180"/>
-<pin name="SPI_MISO1" x="22.86" y="27.94" length="short" rot="R180"/>
+<pin name="SPI_SDO1" x="22.86" y="30.48" length="short" rot="R180"/>
+<pin name="SPI_SDI1" x="22.86" y="27.94" length="short" rot="R180"/>
 <pin name="BATT_VIN/3" x="-22.86" y="-30.48" length="short"/>
 <pin name="RX1" x="22.86" y="0" length="short" rot="R180"/>
 <pin name="TX1" x="22.86" y="2.54" length="short" rot="R180"/>
@@ -27830,12 +28001,12 @@ Out</text>
 <connect gate="J1" pin="SDIO_DATA2" pad="68"/>
 <connect gate="J1" pin="SPI_!CS!/SDIO_DATA3" pad="70"/>
 <connect gate="J1" pin="SPI_!CS!1" pad="55"/>
-<connect gate="J1" pin="SPI_MISO/SDIO_DATA0" pad="64"/>
-<connect gate="J1" pin="SPI_MISO1" pad="61"/>
-<connect gate="J1" pin="SPI_MOSI/SDIO_CMD" pad="62"/>
-<connect gate="J1" pin="SPI_MOSI1" pad="59"/>
 <connect gate="J1" pin="SPI_SCK/SDIO_CLK" pad="60"/>
 <connect gate="J1" pin="SPI_SCK1" pad="57"/>
+<connect gate="J1" pin="SPI_SDI/SDIO_DATA0" pad="64"/>
+<connect gate="J1" pin="SPI_SDI1" pad="61"/>
+<connect gate="J1" pin="SPI_SDO/SDIO_CMD" pad="62"/>
+<connect gate="J1" pin="SPI_SDO1" pad="59"/>
 <connect gate="J1" pin="SWDCK" pad="21"/>
 <connect gate="J1" pin="SWDIO" pad="23"/>
 <connect gate="J1" pin="TX1" pad="17"/>
@@ -27897,12 +28068,12 @@ Out</text>
 <connect gate="J1" pin="SDIO_DATA2" pad="68"/>
 <connect gate="J1" pin="SPI_!CS!/SDIO_DATA3" pad="70"/>
 <connect gate="J1" pin="SPI_!CS!1" pad="55"/>
-<connect gate="J1" pin="SPI_MISO/SDIO_DATA0" pad="64"/>
-<connect gate="J1" pin="SPI_MISO1" pad="61"/>
-<connect gate="J1" pin="SPI_MOSI/SDIO_CMD" pad="62"/>
-<connect gate="J1" pin="SPI_MOSI1" pad="59"/>
 <connect gate="J1" pin="SPI_SCK/SDIO_CLK" pad="60"/>
 <connect gate="J1" pin="SPI_SCK1" pad="57"/>
+<connect gate="J1" pin="SPI_SDI/SDIO_DATA0" pad="64"/>
+<connect gate="J1" pin="SPI_SDI1" pad="61"/>
+<connect gate="J1" pin="SPI_SDO/SDIO_CMD" pad="62"/>
+<connect gate="J1" pin="SPI_SDO1" pad="59"/>
 <connect gate="J1" pin="SWDCK" pad="21"/>
 <connect gate="J1" pin="SWDIO" pad="23"/>
 <connect gate="J1" pin="TX1" pad="17"/>
@@ -29694,7 +29865,7 @@ super low-power modes</text>
 <segment>
 <wire x1="134.62" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <label x="137.16" y="149.86" size="1.27" layer="95" xref="yes"/>
-<pinref part="J15" gate="J1" pin="SPI_MOSI/SDIO_CMD"/>
+<pinref part="J15" gate="J1" pin="SPI_SDO/SDIO_CMD"/>
 </segment>
 </net>
 <net name="SPI_CIPO" class="0">
@@ -29716,7 +29887,7 @@ super low-power modes</text>
 <segment>
 <wire x1="134.62" y1="147.32" x2="137.16" y2="147.32" width="0.1524" layer="91"/>
 <label x="137.16" y="147.32" size="1.27" layer="95" xref="yes"/>
-<pinref part="J15" gate="J1" pin="SPI_MISO/SDIO_DATA0"/>
+<pinref part="J15" gate="J1" pin="SPI_SDI/SDIO_DATA0"/>
 </segment>
 </net>
 <net name="SD_!CS!" class="0">
