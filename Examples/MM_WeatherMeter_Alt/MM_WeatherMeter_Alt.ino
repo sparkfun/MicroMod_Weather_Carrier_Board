@@ -129,8 +129,8 @@ void setup()
   lastSecond = millis();
 
   // attach external interrupt pins to IRQ functions
-  attachInterrupt(0, rainIRQ, FALLING);
-  attachInterrupt(1, wspeedIRQ, FALLING);
+  attachInterrupt(RAIN, rainIRQ, FALLING);
+  attachInterrupt(WSPEED, wspeedIRQ, FALLING);
 
   // turn on interrupts
   interrupts();
