@@ -89,6 +89,7 @@ void setup() {
   Serial.println();
 
   Wire.begin();
+  SPI.begin();
 
   if (tempSensor.beginI2C() == false) { //Begin communication over I2C
     Serial.println("BME280 did not respond.");

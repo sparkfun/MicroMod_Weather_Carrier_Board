@@ -42,7 +42,7 @@ int spiCS = G1;
 // event issued by the lightning detector. 
 int intVal = 0;
 int noise = 2; // Value between 1-7 
-int disturber = 2; // Value between 1-10
+int disturber = 10; // Value between 1-10
 
 void setup()
 {
@@ -55,10 +55,12 @@ void setup()
   // When lightning is detected the interrupt pin goes HIGH.
   pinMode(lightningInt, INPUT); 
 
-  #if defined(ESP_PLATFORM)
-  SPI.begin(14, 2, 15); 
-  #endif
+//  #if defined(ESP_PLATFORM)
+//  SPI.begin(14, 2, 15); 
+//  #endif
 
+  SPI.begin();
+  
   if(lightning.beginSPI(spiCS, 2000000) == false){ 
     Serial.println ("Lightning Detector did not start up, freezing!"); 
     while(1); 
@@ -74,6 +76,7 @@ void setup()
 
 void loop()
 {
+  Serial.println(digitalRead(lightningInt));
    // Hardware has alerted us to an event, now we read the interrupt register
   if(digitalRead(lightningInt) == HIGH){
     intVal = lightning.readInterruptReg();
@@ -81,13 +84,13 @@ void loop()
       Serial.println("Noise."); 
       // Too much noise? Uncomment the code below, a higher number means better
       // noise rejection.
-      //lightning.setNoiseLevel(noise); 
+      lightning.setNoiseLevel(noise); 
     }
     else if(intVal == DISTURBER_INT){
       Serial.println("Disturber."); 
       // Too many disturbers? Uncomment the code below, a higher number means better
       // disturber rejection.
-//      lightning.watchdogThreshold(disturber);  
+      lightning.watchdogThreshold(disturber);  
     }
     else if(intVal == LIGHTNING_INT){
       Serial.println("Lightning Strike Detected!"); 
