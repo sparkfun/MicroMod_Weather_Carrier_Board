@@ -1,7 +1,7 @@
 SparkFun MicroMod Weather Carrier Board
 ========================================
 
-![SparkFun MicroMod Weather Carrier Board](https://cdn.sparkfun.com/assets/parts/1/5/7/0/3/16794-SparkFun_MicroMod_Weather_Carrier_Board-01a.jpg)
+![SparkFun MicroMod Weather Carrier Board](https://cdn.sparkfun.com/assets/parts/1/5/7/0/3/16794-SparkFun_MicroMod_Weather_Carrier_Board-01b.jpg)
 
 [*SparkFun MicroMod Weather Carrier Board (SEN-16794)*](https://www.sparkfun.com/products/16794)
 
