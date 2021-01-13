@@ -30,11 +30,6 @@
 
 SparkFun_AS3935 lightning;
 
-#if defined(ESP_PLATFORM)
-const int G3 = 17;
-int G1 = 12;
-#endif
-
 const int lightningInt = G3;
 int spiCS = G1;
 
@@ -42,7 +37,7 @@ int spiCS = G1;
 // event issued by the lightning detector. 
 int intVal = 0;
 int noise = 2; // Value between 1-7 
-int disturber = 10; // Value between 1-10
+int disturber = 2; // Value between 1-10
 
 void setup()
 {
@@ -54,10 +49,6 @@ void setup()
   
   // When lightning is detected the interrupt pin goes HIGH.
   pinMode(lightningInt, INPUT); 
-
-//  #if defined(ESP_PLATFORM)
-//  SPI.begin(14, 2, 15); 
-//  #endif
 
   SPI.begin();
   
@@ -71,12 +62,14 @@ void setup()
   // The lightning detector defaults to an indoor setting at 
   // the cost of less sensitivity, if you plan on using this outdoors 
   // uncomment the following line:
-  lightning.setIndoorOutdoor(OUTDOOR); 
+//  lightning.setIndoorOutdoor(OUTDOOR); 
 }
 
 void loop()
 {
+  //This is for debugging
   Serial.println(digitalRead(lightningInt));
+  
    // Hardware has alerted us to an event, now we read the interrupt register
   if(digitalRead(lightningInt) == HIGH){
     intVal = lightning.readInterruptReg();
@@ -84,13 +77,13 @@ void loop()
       Serial.println("Noise."); 
       // Too much noise? Uncomment the code below, a higher number means better
       // noise rejection.
-      lightning.setNoiseLevel(noise); 
+//      lightning.setNoiseLevel(noise); 
     }
     else if(intVal == DISTURBER_INT){
       Serial.println("Disturber."); 
       // Too many disturbers? Uncomment the code below, a higher number means better
       // disturber rejection.
-      lightning.watchdogThreshold(disturber);  
+//      lightning.watchdogThreshold(disturber);  
     }
     else if(intVal == LIGHTNING_INT){
       Serial.println("Lightning Strike Detected!"); 
@@ -100,6 +93,10 @@ void loop()
       Serial.print("Approximately: "); 
       Serial.print(distance); 
       Serial.println("km away!"); 
+    }
+    else {
+      Serial.print("Unknown interrupt val: ");
+      Serial.println(intVal);
     }
   }
   delay(100); // Slow it down.
