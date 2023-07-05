@@ -3,7 +3,7 @@
   By: Nathan Seidle
   SparkFun Electronics
   Date: November 16th, 2013
-  License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware license).
+  License: MIT
 
   Much of this is based on Mike Grusin's USB Weather Board code: https://www.sparkfun.com/products/10586
 

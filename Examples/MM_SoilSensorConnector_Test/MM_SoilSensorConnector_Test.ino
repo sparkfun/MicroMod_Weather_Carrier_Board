@@ -6,9 +6,6 @@
  *  
  *  Priyanka Makin @ SparkX Labs
  *  Original Creation Date: August 11, 2020
- *  
- * This code is Lemonadeware; if you see me (or any other SparkFun employee) at the
- * local, and you've found our code helpful, please buy us a round!
  * 
  *  Hardware connections:
  *  Insert MicroMod processor board of your choice into the M.2 connector of the SparkFun Weather carrier
