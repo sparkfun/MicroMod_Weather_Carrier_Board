@@ -2,7 +2,7 @@
  *  MicroMod Weather Carrier Board Soil Moisture Connector Example
  *  
  *  This sketch tests the the connector and reading the analog values
- *  of the soil mosture sensor.
+ *  of the soil moisture sensor.
  *  
  *  Priyanka Makin @ SparkX Labs
  *  Original Creation Date: August 11, 2020

@@ -12,7 +12,7 @@
  * Hardware Connections:
  * Insert MicroMod processor board of your choice into the M.2 connector of the SparkFun Weather carrier
  *  Screw into place
- * Connect Weather carrier board to power useing USB-C cable
+ * Connect Weather carrier board to power using USB-C cable
  * Connect SparkFun Soil Moisture Sensor to Weather carrier using latching terminals
  * Connect both wind and rain meters to Weather carrier using the RJ11 connectors
  */
