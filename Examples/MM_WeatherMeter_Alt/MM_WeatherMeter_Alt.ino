@@ -10,14 +10,11 @@
   This is a more advanced example of how to utilize every aspect of the weather shield. See the basic
   example if you're just getting started.
 
-  This code reads all the various sensors (wind speed, direction, rain gauge, humidty, pressure, light, batt_lvl)
-  and reports it over the serial comm port. This can be easily routed to an datalogger (such as OpenLog) or
-  a wireless transmitter (such as Electric Imp).
+  This code reads all the various sensors (wind speed, direction, rain gauge, humidity, pressure, light, batt_lvl)
+  and reports it over the serial comm port.
 
-  Measurements are reported once a second but windspeed and rain gauge are tied to interrupts that are
-  calcualted at each report.
-
-  This example code assumes the GPS module is not used.
+  Measurements are reported once a second but wind speed and rain gauge are tied to interrupts that are
+  calculated at each report.
 
 
   Updated by Joel Bartlett

@@ -1,3 +1,21 @@
+/*
+ * MicroMod Weather Carrier Board SD Card and Lightning Detector Example
+ * 
+ * This example demonstrates how to detect lightning and record the data to an SD card
+ * 
+ * Priyanka Makin @ SparkX Labs
+ * Based on code by Elias Santistevan
+ * Original Creation Date: Jan 13, 2021
+ * 
+ * Hardware Connections:
+ * Insert MicroMod processor board of your choice into the M.2 connector of the SparkFun Weather carrier
+ *  Screw into place
+ * Connect Weather carrier board to power using USB-C cable
+ * Insert a compatible uSD card into the SD card slot
+ * 
+ * Distributed as-is; no warranty is given.
+*/
+
 #include <SPI.h>
 #include <SD.h>
 #include "SparkFun_AS3935.h"
