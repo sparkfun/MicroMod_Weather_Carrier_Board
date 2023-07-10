@@ -7,7 +7,6 @@
  * 
  * Priyanka Makin @ SparkX Labs
  * Original Creation Date: August 20, 2020
-
  * 
  * Hardware Connections:
  * Insert MicroMod processor board of your choice into the M.2 connector of the SparkFun Weather carrier
@@ -15,6 +14,11 @@
  * Connect Weather carrier board to power using USB-C cable
  * Connect SparkFun Soil Moisture Sensor to Weather carrier using latching terminals
  * Connect both wind and rain meters to Weather carrier using the RJ11 connectors
+ * 
+ * Updated be Wes Furuya
+ * 07/10/2023
+ * Implemented "Weather Meter" Arduino library
+ * Updated pins for other processor boards
  */
 
 #include <Wire.h>
@@ -22,6 +26,8 @@
 #include "SparkFunBME280.h"
 #include <SparkFun_VEML6075_Arduino_Library.h>
 #include "SparkFun_AS3935.h"
+#include "SparkFun_Weather_Meter_Kit_Arduino_Library.h"  //http://librarymanager/All#SparkFun_Weather_Meter_Kit
+
 
 BME280 tempSensor;
 VEML6075 uv;

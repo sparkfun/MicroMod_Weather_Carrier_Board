@@ -14,88 +14,107 @@
  * Connect both wind and rain meters to Weather carrier using the RJ11 connectors
  * 
  * Distributed as-is; no warranty is given.
+ * 
+ * Updated be Wes Furuya
+ * 07/10/2023
+ * Implemented "Weather Meter" Arduino library
+ * Updated pins for other processor boards
  */
 
+
+#include "SparkFun_Weather_Meter_Kit_Arduino_Library.h"  //http://librarymanager/All#SparkFun_Weather_Meter_Kit
+
+
+//Hardware pin definitions
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 #if defined(ESP_PLATFORM)
-int D0 = 23;
-int A1 = 35;
-int D1 = 27;
-#elif defined(ARDUINO_ARCH_SAMD)
-int D0 = 0;
-int D1 = 1;
+const byte WSPEED = 14;  //Digital I/O pin for wind speed
+const byte WDIR = 35;  //Analog pin for wind direction
+const byte RAIN = 27;  //Digital I/O pin for rain fall
+#elif defined(ARDUINO_RASPBERRY_PI_PICO)
+const byte WSPEED = 6;  //Digital I/O pin for wind speed
+const byte WDIR = A1;  //Analog pin for wind direction
+const byte RAIN = 7;  //Digital I/O pin for rain fall
+#elif defined(ARDUINO_TEENSY_MICROMOD)
+const byte WSPEED = 4;  //Digital I/O pin for wind speed
+const byte WDIR = A1;  //Analog pin for wind direction
+const byte RAIN = 4;  //Digital I/O pin for rain fall
+#else
+const byte WSPEED = D0;  //Digital I/O pin for wind speed
+const byte WDIR = A1;  //Analog pin for wind direction
+const byte RAIN = D1;  //Digital I/O pin for rain fall
 #endif
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-int WSPEED = D0;  //Digital I/O pin for wind speed
-int WDIR = A1;  //Analog pin for wind direction
-int RAIN = D1;  //Digital I/O pin for rain fall
+//Global Variables
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+long lastSecond;  //The millis counter to see when a second rolls by
 
-volatile bool rainFlag = false;
-volatile bool windFlag = false;
+float wind_dir = 0;    // [degrees (Cardinal)]
+float wind_speed = 0;  // [kph]
+float rain = 0;        // [mm]
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-//Function is called every time the rain bucket tips
-void rainIRQ() {
-  rainFlag = true;
-}
+SFEWeatherMeterKit myweatherMeterKit(WDIR, WSPEED, RAIN);  // Create an instance of the weather meter kit
 
-//Function is called every time the rain bucket tips
-void wspeedIRQ() {
-  windFlag = true;
-}
+
 
 void setup() {
   Serial.begin(115200);
-  while (!Serial);  //Wait for user to open serial monitor
-  
-  Serial.println("MicroMod Weather Carrier Board Test - Weather Meter");
-  Serial.println();
+  Serial.println("Example - Weather Meter Kit");
 
-  //Initialization from weather meter
-  pinMode(WSPEED, INPUT_PULLUP);  //Input from wind meters windspeed sensor
-  pinMode(RAIN, INPUT_PULLUP);  //Input from wind meters rain gauge sensor
-  //attach external interrupt pins to IRQ functions
-  attachInterrupt(digitalPinToInterrupt(RAIN), rainIRQ, FALLING);
-  attachInterrupt(digitalPinToInterrupt(WSPEED), wspeedIRQ, FALLING);
-  //Turn on interrupts
-  interrupts();
+  pinMode(LED_BUILTIN, OUTPUT);  //Status LED Blue
+
+  // The weather meter kit library assumes a 12-bit ADC
+  // Configuring a 10-bit ADC resolution for the ATmega328 (RedBoard/Uno)
+  myweatherMeterKit.setADCResolutionBits(10);
+
+  // Begin weather meter kit
+  myweatherMeterKit.begin();
+
+  lastSecond = millis();
+
+  Serial.println("Begin data collection!");
 }
 
 void loop() {
-  Serial.print("Wind direction: ");
-  Serial.print(getWindDirection());
-  Serial.println(" degrees");
+  //Keep track of which minute it is
+  if (millis() - lastSecond >= 1000) {
+    digitalWrite(LED_BUILTIN, HIGH);  //Blink stat LED
 
-  //Check interrupt flags
-  if (rainFlag == true) {
-    Serial.println("Rain click!");
-    rainFlag = false;
+    lastSecond += 1000;
+
+    //Report all readings every second
+    printWeather();
   }
-  if (windFlag == true) {
-    Serial.println("Wind click!");
-    windFlag = false;
-  }
-  delay(1000);
+
+  digitalWrite(LED_BUILTIN, LOW);  //Turn off stat LED
+
+  delay(100);
 }
 
-int getWindDirection()
-{
-  unsigned int adc;
-  adc = analogRead(WDIR); //get the current readings from the sensor
+//Calculates data from weather meter kit 
+void calcWeather() {
 
-  if (adc < 380) return (113);
-  if (adc < 393) return (68);
-  if (adc < 414) return (90);
-  if (adc < 456) return (158);
-  if (adc < 508) return (135);
-  if (adc < 551) return (203);
-  if (adc < 615) return (180);
-  if (adc < 680) return (23);
-  if (adc < 746) return (45);
-  if (adc < 801) return (248);
-  if (adc < 833) return (225);
-  if (adc < 878) return (338);
-  if (adc < 913) return (0);
-  if (adc < 940) return (293);
-  if (adc < 967) return (315);
-  if (adc < 990) return (270);
-  return (-1);
+  //Weather Meter Kit
+  //Calc Wind
+  wind_dir = myweatherMeterKit.getWindDirection();
+  wind_speed = myweatherMeterKit.getWindSpeed();
+  //Calc Rain
+  rain = myweatherMeterKit.getTotalRainfall();
+}
+
+//Prints the various variables directly to the port
+//I don't like the way this function is written but Arduino doesn't support floats under sprintf
+void printWeather() {
+  calcWeather();  //Go calc all the various sensors
+
+  Serial.println();
+  Serial.print("wind direction= ");
+  Serial.print(wind_dir, 1);
+  Serial.print(" deg, wind speed= ");
+  Serial.print(wind_speed, 1);
+  Serial.print(" kph, total rain= ");
+  Serial.print(rain, 1);
+  Serial.println(" mm");
 }
